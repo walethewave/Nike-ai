@@ -1,0 +1,43 @@
+We highlight limitations known at the time of writing this skeleton, to be
+extended with findings from Phases 1--3:
+
+\textbf{Single-run evaluation, with one measured exception.} Our ASR
+benchmark (Table~\ref{tab:asr-results}) and fine-tuning results
+(\S\ref{sec:finetune-results}) are each single runs at the reported $n$;
+the companion \texttt{yoruba-prompt-experiment} found meaningful
+run-to-run variance on an arithmetic reasoning task using an identical
+prompt and model, so these numbers should be read as point estimates, not
+confidence-bounded results. The one place we did explicitly measure
+run-to-run variance (\S\ref{sec:numeral-results}) found it to be real and
+consequential --- both in the LLM's numeral-extraction accuracy (three
+different wrong answers across three identical calls) and in TTS output
+(five distinct audio outputs across five identical synthesis calls) ---
+which is itself evidence for, not against, this caveat: where we looked
+for variance, we found it.
+
+\textbf{Domain mismatch.} Our ASR fine-tuning data (Common Voice 17,
+FLEURS) is read/scripted speech, while the deployed system is used
+conversationally (\S\ref{sec:methodology}); we did not measure whether
+this mismatch contributes to the gap between benchmark WER
+(Table~\ref{tab:asr-results}) and the qualitative failures observed in
+live pipeline testing (\S\ref{sec:numeral-results}).
+
+\textbf{Dialect coverage.} Our data and evaluation may not represent the
+full range of Yor\`ub\'a regional dialects; see \citet{voices-unheard-yoruba}
+for documented dialect-related NLP resource gaps.
+
+\textbf{No streaming, no barge-in.} The deployed pipeline
+(\S\ref{sec:methodology}) processes each turn as a complete round trip;
+it does not support interrupting the system mid-response, which limits how
+naturally conversational it feels compared to human-human dialogue.
+
+\textbf{Licensing constraints on deployment.} [If NaijaVoices (CC~BY-NC-SA)
+was used for training, state explicitly that the resulting model cannot be
+deployed commercially without a separate permissively-licensed variant —
+see \texttt{phase1-data/PLAN.md}'s licensing decision.]
+
+\textbf{Single judge / evaluator.} [If an LLM-judge was used anywhere in
+this pipeline's evaluation (as in the companion Yor\`ub\'a-prompt
+experiment), state that it was not cross-validated against a second
+independent judge, and native-speaker ratings are the more trustworthy
+signal where they exist.]

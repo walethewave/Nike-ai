@@ -1,0 +1,37 @@
+[
+  {
+    "label": "finance",
+    "input_text": "Mo na naira ẹgbẹrun mẹwa lori ounje loni",
+    "asr_roundtrip_text": "mo na nara egberun mawa lori un je loni",
+    "router_domain": "finance",
+    "handled_domain": "finance",
+    "reply_text": "(Mo tún iye owó ṣe sí ₦10,000.00 — mo gbọ́ nọ́mbà tí kò tọ́ ní àkọ́kọ́.) Mo ti fi kọ̀wé pé o ná ₦10,000.00 lórí food. Owó tí ó kù nísisìyí ni ₦-92,000.00.",
+    "reply_audio_path": "/Users/walethewave/Desktop/Project/Nike-ai/phase7-integration/samples/live_integration_finance_reply.wav",
+    "handling_detail": {
+      "intent": "add_expense",
+      "balance_after": -92000.0
+    },
+    "timings_sec": {
+      "tts_input": 13.12,
+      "asr": 12.51,
+      "handle_turn": 4.55,
+      "tts_output": 1.37
+    }
+  },
+  {
+    "label": "chat",
+    "input_text": "Bawo ni? Se daadaa ni?",
+    "asr_roundtrip_text": "báwo ni se dádà ni",
+    "router_domain": "chat",
+    "handled_domain": "chat",
+    "reply_text": "Èkáàro! Mo dákun! Ìwọ nìkan lo wà, tàbí ìwọ àti àwọn ẹlòmọ rẹ? Mo rẹ̀rìn-ín nítorí àwọn ọ̀rọ̀ rẹ. Báwo ni a dádà ní lásìkó yìì? Nǹkan tó ṣe ní àyínká rẹ?",
+    "reply_audio_path": "/Users/walethewave/Desktop/Project/Nike-ai/phase7-integration/samples/live_integration_chat_reply.wav",
+    "handling_detail": {},
+    "timings_sec": {
+      "tts_input": 0.22,
+      "asr": 3.02,
+      "handle_turn": 3.24,
+      "tts_output": 1.45
+    }
+  }
+]

@@ -1,0 +1,45 @@
+\subsection{System Architecture}
+
+[SYSTEM NAME] is a three-stage pipeline (Figure~\ref{fig:architecture}):
+an ASR stage transcribes Yor\`ub\'a speech to text; a dialogue stage
+(a large language model with a Yor\`ub\'a-language system prompt and
+multi-turn conversation state) generates a response; a TTS stage
+(YarnGPT2, \citealp{yarngpt2}) synthesizes the response as speech. Unlike
+prior Yor\`ub\'a voice work, which evaluates ASR or TTS in isolation, we
+evaluate the full loop (\S\ref{sec:experiments}).
+
+\subsection{ASR}
+We benchmark [N] ASR systems (\S\ref{sec:experiments}) and select
+[CHOSEN MODEL] for the deployed pipeline based on [WER vs.\ latency
+tradeoff — fill in from \texttt{phase2-asr/PLAN.md}'s written
+recommendation].
+
+\subsection{Dialogue}
+We use [LLM, e.g.\ Claude Haiku~4.5] with a system prompt instructing
+Yor\`ub\'a-only responses. Prior experimentation (a controlled comparison
+of English- vs.\ Yor\`ub\'a-language system prompts across three LLM
+families, reported separately) found no measurable difference in output
+fluency or code-switching rate attributable to system-prompt language;
+we therefore use an English-language system prompt for engineering
+simplicity, with no measured cost to output quality.\footnote{See the
+companion experiment in this project's repository
+(\texttt{yoruba-prompt-experiment/RESULTS.md}) for the full methodology
+and results, run independently of this system.}
+
+\subsection{TTS}
+We synthesize responses with YarnGPT2 \citep{yarngpt2}, using the
+[SPEAKER NAME] voice. During development we validated the full pipeline
+end-to-end using a lighter-weight substitute, the Yor\`ub\'a checkpoint of
+Meta's MMS-TTS \citep{mms-tts} (part of the broader MMS project,
+\citealp{mms}) --- a single-speaker VITS model roughly 20$\times$ smaller
+than YarnGPT2's setup footprint, at a quality cost (more monotone output,
+no voice selection) we judged acceptable for pipeline validation but not
+for the deployed system reported in \S\ref{sec:results}.
+
+\begin{figure}[t]
+\centering
+% \includegraphics[width=\columnwidth]{figures/architecture.pdf}
+\caption{[Architecture diagram — ASR $\to$ LLM $\to$ TTS, matching
+\texttt{ROADMAP.md}'s pipeline diagram.]}
+\label{fig:architecture}
+\end{figure}

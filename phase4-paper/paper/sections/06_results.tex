@@ -1,0 +1,141 @@
+\subsection{ASR Benchmark}
+\input{sections/_asr_table}
+
+Table~\ref{tab:asr-results} reports tone-sensitive and tone-agnostic WER/CER
+for three Whisper-family systems on our \citet{shunyalabs-yoruba}-derived
+smoke-test set (\S\ref{sec:data}). \citet{whisper-small-yoruba}, a
+\citet{whisper} \texttt{small} checkpoint fine-tuned on FLEURS Yor\`ub\'a,
+is the clear winner at 46.1\% tone-agnostic WER, well ahead of
+\citet{whisper-base-yoruba-colab} (68.5\%) and dramatically ahead of
+zero-shot \texttt{large-v3} (100\%) --- the larger, non-fine-tuned model
+fails completely on Yor\`ub\'a, in most cases emitting a single punctuation
+character or one stray token rather than any real transcription. This is a
+striking illustration of a pattern this line of work keeps surfacing: raw
+model scale does not substitute for Yor\`ub\'a-specific fine-tuning, even
+against a much smaller fine-tuned competitor. We select
+\citet{whisper-small-yoruba} for the deployed pipeline (\S\ref{sec:methodology})
+on this basis. Tone-sensitive scoring is uniformly worse than tone-agnostic
+scoring for every system --- a 13.1-point WER gap for the winning model
+alone (59.2\% vs.\ 46.1\%) --- confirming \citet{tone-yoruba-asr}'s finding
+that tone marking materially affects reported Yor\`ub\'a ASR quality; the
+ranking across systems does not change between the two scoring modes in
+our results, but the \emph{magnitude} of every system's error rate does,
+which matters for anyone citing a single WER number without specifying
+which mode it was computed under.
+
+\subsection{Fine-Tuning Attempt: A Negative Result}
+\label{sec:finetune-results}
+Motivated by \S\ref{sec:data}'s permissively-licensed corpus, we further
+fine-tuned \citet{whisper-small-yoruba} itself on 150 held-in utterances
+(disjoint from a 30-utterance held-out evaluation set) drawn from Common
+Voice~17 and FLEURS, to test whether additional training on top of an
+already-fine-tuned checkpoint could close more of the remaining gap. An
+initial attempt (under one epoch, learning rate $1\times10^{-5}$, 5-step
+warmup) made held-out WER \emph{worse} (57.5\% $\to$ 62.5\%), which we
+traced to insufficient training combined with too aggressive a learning
+rate for so little data. A corrected recipe (3 full epochs, learning rate
+$5\times10^{-6}$, 10\% warmup ratio) showed a real recovery trend across
+epochs (57.5\% $\to$ 64.6\% $\to$ 60.4\% $\to$ 55.2\% on a fixed
+per-epoch tracking subset) but still landed slightly worse than the
+zero-shot baseline on the full held-out set (57.5\% $\to$ 61.4\%,
+$\Delta{=}{+}3.9$ points) at the point training stopped. We attempted to
+extend training to 5 epochs to test whether the trend would continue past
+this point, but this failed twice for infrastructure reasons specific to
+our hardware (Apple Silicon / MPS): once from an out-of-memory crash 71\%
+through training, and once, after enabling gradient checkpointing as the
+standard memory mitigation, from a distinct PyTorch reentrant-checkpointing
+crash incompatible with Whisper's decoder caching that we did not
+further diagnose. We report this honestly as an unresolved negative
+result rather than omitting it: with 150 training utterances and $\leq$3
+epochs on this hardware, further fine-tuning an already-fine-tuned
+Yor\`ub\'a Whisper checkpoint did not improve held-out WER, though the
+per-epoch trajectory suggests it might with either more data, more epochs
+on stronger hardware, or both --- a claim we did not verify. (While
+building the training harness we also found and fixed a reproducibility
+bug worth noting for other practitioners: seeding Python's \texttt{random}
+module for the train/eval split is not sufficient for reproducible
+training runs, since it leaves PyTorch's own RNG --- governing batch
+shuffling and dropout --- unseeded; two "identical-configuration" runs
+produced different trajectories until \texttt{torch.manual\_seed()} was
+also set.)
+
+\subsection{Yor\`ub\'a-Numeral Parsing: An LLM Failure Mode and Its Fix}
+\label{sec:numeral-results}
+Independent of ASR quality, we found that the LLM stage of our pipeline
+(Claude Haiku~4.5, used for dialogue and, in our finance-tracking
+deployment, structured amount extraction) unreliably parses Yor\`ub\'a
+number words even when given clean, correctly-transcribed text as input.
+A systematic test of 14 real Yor\`ub\'a number words, each substituted into
+a fixed carrier sentence and passed through the live model, found only
+5/14 (36\%) parsed to the correct numeric value. The failure pattern is
+sharp rather than uniformly noisy: the model is reliable on small units
+spoken alone (1--10) and on simple round-thousand multiples, but the
+entire tens/hundreds range is broken, including Yor\`ub\'a's irregular
+base-20 subtractive forms (e.g.\ \emph{\`a\'ad\'ota}, literally
+"ten-short-of-sixty," for 50). Errors are also non-deterministic: the
+single sentence that first surfaced this issue was re-run three times at
+identical settings and produced three \emph{different} wrong answers
+across the three calls. This matters specifically because the failure is
+silent --- there is no low-confidence signal, malformed output, or refusal
+that would flag the extracted number as untrustworthy; the model states a
+specific, plausible-looking wrong number with the same confidence as a
+correct one, which is the worst failure mode for a value written directly
+to a financial ledger.
+
+We built and verified a fix: a small, fully deterministic Yor\`ub\'a-number
+parser (rule-based, no model inference) that independently parses the same
+text and cross-checks the LLM's extracted amount, auto-correcting on
+disagreement and surfacing the correction transparently in the system's
+reply rather than silently overwriting the value. Verified live against
+the same production model and endpoint, the guardrail achieved 13/13
+correct, including full recovery of the original failing case and every
+one of the 8 words that had been wrong in the systematic test above. Two
+implementation pitfalls surfaced while building it are worth noting as
+concrete evidence of how easy Yor\`ub\'a NLP is to get subtly wrong even
+when actively trying to fix something: (1) Yor\`ub\'a tone-marked
+underdot vowels (e.g.\ \emph{\'{\d{e}}}, an underdotted \emph{\d{e}} with
+an acute tone mark) are not single Unicode
+codepoints even after NFC normalization --- they decompose into a base
+letter plus a separate combining diacritic --- so a na\"ive per-codepoint
+tone-stripping pass silently leaves some tone marks in place; and (2) an
+initial "if the word after the thousand-marker is unrecognized, default to
+a bare thousand" fallback was itself an instance of the exact failure mode
+under investigation --- a confident, silent wrong answer --- and had to be
+replaced with a fallback that refuses to guess.
+
+Deploying this guardrail is not sufficient on its own, however: a
+full-pipeline (ASR $\to$ LLM $\to$ TTS $\to$ ASR-again, in our
+voice-message-replay evaluation setup) diagnostic found that upstream
+text-to-speech non-determinism can itself corrupt the number word before
+the guardrail ever sees it (\S\ref{sec:limitations}), and that an unset
+LLM temperature parameter (defaulting to the API's 1.0 for what should be
+a deterministic extraction task) compounds the same silent-wrong-answer
+risk independently of numeral parsing specifically. Fixing all three
+issues together --- an opt-in deterministic TTS seed, \texttt{temperature=0}
+on the extraction call, and the guardrail's vocabulary --- brought
+repeated end-to-end runs of the same input from 0/6 correct (before this
+investigation) to 3/3 correct, with the correction visibly surfaced in the
+system's own reply. We consider this three-bug diagnostic chain, more than
+any single fix in isolation, the paper's clearest illustration of why a
+cascaded pipeline with deterministic guardrails at each silent-failure
+point is a more defensible design for user-facing deployment than trusting
+a single large model end-to-end, however capable that model is on other
+axes.
+
+\subsection{End-to-End Conversational Results}
+We have not yet run a formal native-speaker naturalness/task-success study
+(\S\ref{sec:limitations}); \S\ref{sec:numeral-results}'s 3/3 end-to-end
+verification is a narrower, code-path-specific correctness check (does the
+system write the right number to the right place), not a naturalness or
+task-success rating, and should not be conflated with the latter.
+[FILL IN once Phase 3's native-speaker evaluation
+(\texttt{phase3-conversational/PLAN.md}, Steps 5--6) is actually run:
+naturalness/task-success ratings, code-switch rate of the deployed
+pipeline, and qualitative findings from real-user testing sessions.]
+
+\subsection{Baselines}
+No prior open, end-to-end (speech-in, speech-out, multi-turn) Yor\`ub\'a
+conversational system exists to compare against --- the closest published
+work evaluates ASR (\citealp{owe-voice,tone-yoruba-asr}) or TTS in
+isolation, not the full loop. This absence is itself part of the novelty
+claim (\S\ref{sec:introduction}), not a gap in our evaluation design.

@@ -1,0 +1,17 @@
+{
+  "reference_transcript": "a ní ìrírí àkókò gẹ́gẹ́ bí ìṣẹ̀lẹ̀ tó ń ṣẹ̀ lẹ́sẹsẹ láti ọjọ́ iwájú wá sí àkókò yìí lọ sẹ́yìn",
+  "asr_output": "a ní ìrírí àkókò gẹ́gẹ́ bí ìṣẹ̀lẹ̀ tó ń ṣẹ̀ lẹ́sẹsẹ láti ọjọ́ iwájú wá sí àkókò yìí lọ sẹ́yìn",
+  "llm_stage": "ok",
+  "llm_reply": "Àwọn ọ̀rọ̀ yìí dùn gan-an! Bẹ́ẹ̀ ni, ìrírí àkókò jẹ́ nǹkan tó ń ṣiṣẹ́ kìkì fún wa. Kò sí ìṣẹ̀lẹ̀ kan tá tí ṣe tàbí tá ó ń ṣe tán — gbogbo rẹ̀ sábà jẹ́ pẹ̀lú àkókò náà.\n\nBí a ṣe rò pé àkókò sí ìbẹ̀rẹ̀, oríṣiríṣi ìṣẹ̀lẹ̀ jẹ́ oúnjẹ̀ ìgbá àkókò. Àkókò tìrẹ̀ náà ló ń dá wọn ní àkìyèsí tí àwọn tó ń jẹ́ nǹkan tó wáyé rí. Ohun gidi jẹ́ pé àkókò àti ìṣẹ̀lẹ̀ wọ́n ni ọ̀kàn — wọn kò le yà wọ́n kúrò fúnfún.\n\nṢùgbọ́n kí ní àkínyèjì nì, àwọn olùfóore àkọ́ge dá ìfẹ̀ẹ́gbárá nípa ohun yìí! Ló jẹ́ àgbẹ̀là àwọn ìmọ̀ran tó ń yẹ̀ pelu ò àgbádùn gan. Kí ní rétí",
+  "output_audio_duration_sec": 39.81,
+  "output_audio_path": "/Users/walethewave/Desktop/Project/Nike-ai/phase3-conversational/samples/live_pipeline_test_reply.wav",
+  "timings": {
+    "fetch_input_audio_sec": 8.45,
+    "asr_sec": 36.36,
+    "llm_sec": 8.65,
+    "tts_sec": 11.11,
+    "total_sec": 64.57
+  },
+  "asr_backend": "whisper_hf",
+  "tts_backend": "mms_tts"
+}

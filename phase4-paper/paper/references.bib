@@ -1,0 +1,171 @@
+% ============================================================
+% All entries below were verified live via the arXiv API
+% (export.arxiv.org/api/query) and ACL Anthology page fetches on
+% 2026-08-13 — full author lists confirmed, not recalled from training
+% knowledge. The only remaining "not a paper" caveats are ncair-yoruba-asr
+% and yarngpt2, which are Hugging Face model cards (software artifacts),
+% not academic papers — their "authors" are organizational/individual
+% attributions from the model card text itself, verified by reading the
+% actual card, not guessed.
+%
+% Added 2026-08-27, same verification standard: `whisper` (the original
+% Radford et al. 2022 paper, cited by name throughout but never actually
+% given a bib entry until the results section needed real ASR baselines);
+% `whisper-small-yoruba` and `whisper-base-yoruba-colab` (the two HF
+% community fine-tunes actually benchmarked in Table~\ref{tab:asr-results}
+% — same "model card, not paper" caveat as ncair-yoruba-asr/yarngpt2 above).
+% ============================================================
+
+@misc{omnilingual2025,
+  title        = {Omnilingual {ASR}: Open-Source Multilingual Speech Recognition for 1600+ Languages},
+  author       = {{Omnilingual ASR team} and Keren, Gil and Kozhevnikov, Artyom and Meng, Yen and
+                   Ropers, Christophe and Setzler, Matthew and Wang, Skyler and Adebara, Ife and
+                   Auli, Michael and Balioglu, Can and Chan, Kevin and Cheng, Chierh and
+                   Chuang, Joe and Droof, Caley and Duppenthaler, Mark and
+                   Duquenne, Paul-Ambroise and Erben, Alexander and Gao, Cynthia and
+                   Mejia Gonzalez, Gabriel and Lyu, Kehan and Miglani, Sagar and
+                   Pratap, Vineel and Sadagopan, Kaushik Ram and Saleem, Safiyyah and
+                   Turkatenko, Arina and Ventayol-Boada, Albert and Yong, Zheng-Xin and
+                   Chung, Yu-An and Maillard, Jean and Moritz, Rashel and
+                   Mourachko, Alexandre and Williamson, Mary and Yates, Shireen},
+  year         = {2025},
+  eprint       = {2511.09690},
+  archiveprefix = {arXiv},
+  url          = {https://arxiv.org/abs/2511.09690}
+}
+
+@misc{naijavoices,
+  title        = {The {NaijaVoices} Dataset: Cultivating Large-Scale, High-Quality, Culturally-Rich Speech Data for African Languages},
+  author       = {Emezue, Chris and {NaijaVoices Community} and Awobade, Busayo and
+                   Owodunni, Abraham and Emezue, Handel and Emezue, Gloria Monica Tobechukwu and
+                   Emezue, Nefertiti Nneoma and Ogun, Sewade and Akinremi, Bunmi and
+                   Adelani, David Ifeoluwa and Pal, Chris},
+  year         = {2025},
+  eprint       = {2505.20564},
+  archiveprefix = {arXiv},
+  note         = {Also presented at Interspeech 2025},
+  url          = {https://arxiv.org/abs/2505.20564}
+}
+
+@misc{ncair-yoruba-asr,
+  title        = {{Yoruba-ASR-v1.0}: {Whisper} Small Fine-Tuned for Yor\`ub\'a},
+  author       = {{Awarri Technologies} and {Federal Ministry of Communications, Innovation and Digital Economy (Nigeria)}},
+  year         = {2025}, % release year not explicitly dated on the model card; approximate
+  howpublished = {Hugging Face model card, \texttt{NCAIR1/Yoruba-ASR}},
+  note         = {License listed as ``other'' on the model card — not a standard open license; verify terms before any use beyond evaluation},
+  url          = {https://huggingface.co/NCAIR1/Yoruba-ASR}
+}
+
+@inproceedings{owe-voice,
+  title        = {{\`O}{WE}-Voice: An Evaluation of Monolingual and Multilingual {ASR} Model Using {Yoruba} Proverb Speech Dataset},
+  author       = {Abolade, Daud},
+  year         = {2026},
+  booktitle    = {Proceedings of the 7th Workshop on African Natural Language Processing (AfricaNLP 2026)},
+  address      = {Rabat, Morocco},
+  url          = {https://aclanthology.org/2026.africanlp-main.8/}
+}
+
+@inproceedings{tone-yoruba-asr,
+  title        = {Tone in {Yoruba} {ASR}: Evaluating the Impact of Tone Recognition on Transformer-Based {ASR} Models},
+  author       = {Olusanya, Joy},
+  year         = {2026},
+  booktitle    = {Proceedings of the Second Workshop on Language Models for Low-Resource Languages (LoResLM 2026)},
+  url          = {https://aclanthology.org/2026.loreslm-1.14/}
+}
+
+@misc{voices-unheard-yoruba,
+  title        = {Voices Unheard: {NLP} Resources and Models for {Yoruba} Regional Dialects},
+  author       = {Ahia, Orevaoghene and Aremu, Anuoluwapo and Abagyan, Diana and Gonen, Hila and
+                   Adelani, David Ifeoluwa and Abolade, Daud and Smith, Noah A. and Tsvetkov, Yulia},
+  year         = {2024},
+  eprint       = {2406.19564},
+  archiveprefix = {arXiv},
+  url          = {https://arxiv.org/abs/2406.19564}
+}
+
+@misc{african-asr-survey,
+  title        = {Automatic Speech Recognition ({ASR}) for African Low-Resource Languages: A Systematic Literature Review},
+  author       = {Imam, Sukairaj Hafiz and Belay, Tadesse Destaw and Husse, Kedir Yassin and
+                   Ahmad, Ibrahim Said and Abdulmumin, Idris and Umar, Hadiza Ali and
+                   Bello, Muhammad Yahuza and Nakatumba-Nabende, Joyce and Yimam, Seid Muhie and
+                   Muhammad, Shamsuddeen Hassan},
+  year         = {2025},
+  eprint       = {2510.01145},
+  archiveprefix = {arXiv},
+  url          = {https://arxiv.org/abs/2510.01145}
+}
+
+@misc{mms,
+  title        = {Scaling Speech Technology to 1,000+ Languages},
+  author       = {Pratap, Vineel and Tjandra, Andros and Shi, Bowen and Tomasello, Paden and
+                   Babu, Arun and Kundu, Sayani and Elkahky, Ali and Ni, Zhaoheng and
+                   Vyas, Apoorv and Fazel-Zarandi, Maryam and Baevski, Alexei and Adi, Yossi and
+                   Zhang, Xiaohui and Hsu, Wei-Ning and Conneau, Alexis and Auli, Michael},
+  year         = {2023},
+  eprint       = {2305.13516},
+  archiveprefix = {arXiv},
+  url          = {https://arxiv.org/abs/2305.13516}
+}
+
+@misc{iroyinspeech,
+  title        = {{\`I}r\`oy\`inSpeech: A Multi-Purpose {Yoruba} Speech Corpus},
+  author       = {Ogunremi, Tolulope and Tubosun, Kola and Aremu, Anuoluwapo and Orife, Iroro and
+                   Adelani, David Ifeoluwa},
+  year         = {2023},
+  eprint       = {2307.16071},
+  archiveprefix = {arXiv},
+  url          = {https://arxiv.org/abs/2307.16071}
+}
+
+@misc{yarngpt2,
+  title        = {{YarnGPT2}: Nigerian-Accented Text-to-Speech},
+  author       = {Niyi, Saheed}, % individual attribution per the GitHub org (saheedniyi02) and
+                                  % Hugging Face username (saheedniyi) — not an academic paper,
+                                  % no separate author list published
+  year         = {2025}, % release year approximate; not explicitly dated on the model card
+  howpublished = {Hugging Face model card and GitHub repository},
+  url          = {https://huggingface.co/saheedniyi/YarnGPT2}
+}
+
+@misc{shunyalabs-yoruba,
+  title        = {Yor\`ub\'a Speech Dataset},
+  author       = {{Shunya Labs}},
+  year         = {2026}, % exact release date not stated on the dataset card
+  howpublished = {Hugging Face dataset card, \texttt{shunyalabs/yoruba-speech-dataset}},
+  note         = {3{,}548 utterances (2{,}339 train / 378 validation / 831 test); \textbf{no license field stated on the dataset card} --- used here only for pipeline smoke-testing (see phase1-data/PLAN.md and phase2-asr/PLAN.md), not as a training-data recommendation, pending license clarification with the maintainer},
+  url          = {https://huggingface.co/datasets/shunyalabs/yoruba-speech-dataset}
+}
+
+@misc{mms-tts,
+  title        = {{MMS-TTS}: Massively Multilingual Speech Text-to-Speech (Yor\`ub\'a Checkpoint)},
+  author       = {{Meta AI (FAIR)}},
+  year         = {2023},
+  howpublished = {Hugging Face model card, \texttt{facebook/mms-tts-yor}, part of the MMS project \citep{mms}},
+  url          = {https://huggingface.co/facebook/mms-tts-yor}
+}
+
+@misc{whisper,
+  title        = {Robust Speech Recognition via Large-Scale Weak Supervision},
+  author       = {Radford, Alec and Kim, Jong Wook and Xu, Tao and Brockman, Greg and
+                   McLeavey, Christine and Sutskever, Ilya},
+  year         = {2022},
+  eprint       = {2212.04356},
+  archiveprefix = {arXiv},
+  url          = {https://arxiv.org/abs/2212.04356}
+}
+
+@misc{whisper-small-yoruba,
+  title        = {{whisper-small-yoruba}: {Whisper} Small Fine-Tuned on {FLEURS} Yor\`ub\'a},
+  author       = {{steja}}, % individual HF username attribution; no separate author list published
+  year         = {2023}, % release year approximate; not explicitly dated on the model card
+  howpublished = {Hugging Face model card, \texttt{steja/whisper-small-yoruba}, fine-tuned from \citet{whisper}'s \texttt{openai/whisper-small} on \texttt{google/fleurs} yo\_ng},
+  url          = {https://huggingface.co/steja/whisper-small-yoruba}
+}
+
+@misc{whisper-base-yoruba-colab,
+  title        = {{whisper-base-yoruba-colab-CV17.0}: {Whisper} Base Fine-Tuned on {Common Voice} 17.0 Yor\`ub\'a},
+  author       = {{ndeclarke}}, % individual HF username attribution; no separate author list published
+  year         = {2024}, % release year approximate; not explicitly dated on the model card
+  howpublished = {Hugging Face model card, \texttt{ndeclarke/whisper-base-yoruba-colab-CV17.0}, fine-tuned from \citet{whisper}'s \texttt{openai/whisper-base} on Common Voice 17.0},
+  url          = {https://huggingface.co/ndeclarke/whisper-base-yoruba-colab-CV17.0}
+}

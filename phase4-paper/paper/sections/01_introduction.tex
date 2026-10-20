@@ -1,0 +1,27 @@
+Yor\`ub\'a is spoken by over 40 million people, primarily in southwestern
+Nigeria, and is one of Nigeria's three major languages alongside Igbo and
+Hausa. Despite this scale, voice-based AI systems for Yor\`ub\'a remain
+fragmented: automatic speech recognition (ASR) systems exist in isolation
+\citep{ncair-yoruba-asr}, text-to-speech (TTS) systems exist in isolation
+\citep{yarngpt2}, and no published, evaluated system connects the two into
+a conversational loop with dialogue state.
+
+This gap matters because a usable Yor\`ub\'a voice assistant requires more
+than accurate transcription: it requires an ASR system robust to
+conversational (not just read) speech, a language model that sustains
+fluent, non-code-switched Yor\`ub\'a across multiple turns, and a TTS system
+that produces natural-sounding output — evaluated together, not as three
+independent benchmarks.
+
+We make two contributions. First, we benchmark Meta's Omnilingual ASR
+\citep{omnilingual2025} — released after most existing Yor\`ub\'a ASR
+literature — against Whisper, MMS, and the existing NCAIR1 Yor\`ub\'a
+fine-tune, under both diacritic-sensitive (tone-aware) and
+diacritic-stripped (tone-agnostic) scoring, motivated by
+\citet{tone-yoruba-asr}'s finding that tone marking materially affects
+reported ASR quality for Yor\`ub\'a. Second, we build and evaluate
+[SYSTEM NAME], an open, end-to-end conversational voice pipeline for
+Yor\`ub\'a, and report both automatic and native-speaker evaluation of the
+full loop — not just its ASR component in isolation.
+
+% Fill in after Phase 2+3: 2-3 sentence summary of headline findings.

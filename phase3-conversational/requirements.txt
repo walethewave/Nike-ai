@@ -1,0 +1,27 @@
+# Core (needed to run the app at all — /health and /chat/text work with just these)
+fastapi>=0.110.0
+uvicorn[standard]>=0.29.0
+pydantic>=2.6.0
+python-multipart>=0.0.9
+python-dotenv>=1.0.0
+anthropic[bedrock]>=0.40.0
+boto3>=1.34.0
+
+# ASR layer (only needed for /chat/voice) — see PLAN.md
+# ASR_BACKEND=omnilingual (default, not yet live-tested here):
+# omnilingual-asr>=0.1.0
+# ASR_BACKEND=whisper_hf (lightweight, LIVE-TESTED — recommended for local dev):
+# transformers>=4.40.0
+# torch
+
+# TTS layer (only needed for /chat/voice) — see PLAN.md "Setup"
+# TTS_BACKEND=yarngpt2 (default, not yet live-tested here — needs a manual
+# git clone + WavTokenizer checkpoint download, not pip-installable):
+# outetts
+# uroman
+# torchaudio
+# TTS_BACKEND=mms_tts (lightweight, LIVE-TESTED — recommended for local dev):
+# transformers>=4.40.0
+# torch
+# scipy
+# soundfile

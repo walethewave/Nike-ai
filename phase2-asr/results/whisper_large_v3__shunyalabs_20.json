@@ -1,0 +1,41 @@
+{
+  "backend": "whisper/openai/whisper-large-v3",
+  "lang": "yor_Latn",
+  "n_utterances": 20,
+  "scores": {
+    "tone_sensitive": {
+      "mode": "tone_sensitive",
+      "wer": 1.0,
+      "cer": 1.0,
+      "n": 20
+    },
+    "tone_agnostic": {
+      "mode": "tone_agnostic",
+      "wer": 1.0,
+      "cer": 1.0,
+      "n": 20
+    }
+  },
+  "sample_predictions": [
+    {
+      "reference": "dr.lee náà fi ẹ̀dùn ọkàn hàn lórí ìrìyìn pé àwọn ọmọ tó wà ní ilẹ̀ turkey ti kó kòkòrò ah5n1 èyí tó jẹ́ ààrùn kòkòrò avian influenza láláì se àìsàn",
+      "hypothesis": "!"
+    },
+    {
+      "reference": "fred ń sáré ní máìlì 105 ní wákàtí 165km/h ó sì ń lọ sí apá àríwá ìwọ̀ oòrùn",
+      "hypothesis": "!"
+    },
+    {
+      "reference": "ọ̀pọ̀ àwọn ọnà onígi tó wà ní australia kò se é dá padà. ó dára kí àwọn tó sẹ̀ ń bẹ̀rẹ má jù ú sínú afẹ́fẹ́.̀",
+      "hypothesis": "!"
+    },
+    {
+      "reference": "a ní ìrírí àkókò gẹ́gẹ́ bí ìṣẹ̀lẹ̀ tó ń ṣẹ̀ lẹ́sẹsẹ láti ọjọ́ iwájú wá sí àkókò yìí lọ sẹ́yìn",
+      "hypothesis": "!"
+    },
+    {
+      "reference": "amo ọ̀rọ yí i ni rọgbọ lati ṣe ó ma gbà ọdún púpọ̀ kató rí àpere kíkò riakto ajokanpọ̀",
+      "hypothesis": "!"
+    }
+  ]
+}

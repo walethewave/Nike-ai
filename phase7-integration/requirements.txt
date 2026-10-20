@@ -1,0 +1,14 @@
+# Phase 7 imports Phase 3 and Phase 5's code directly (see app/orchestrator.py)
+# rather than duplicating dependencies — install both of those phases'
+# requirements.txt first, then this file's few integration-only extras.
+#
+#   pip install -r ../phase3-conversational/requirements.txt
+#   pip install -r ../phase5-finance/requirements.txt
+#   pip install -r requirements.txt
+
+fastapi>=0.110.0
+uvicorn[standard]>=0.29.0
+pydantic>=2.6.0
+python-multipart>=0.0.9
+python-dotenv>=1.0.0
+soundfile>=0.12.1

@@ -1,0 +1,20 @@
+# Core (needed for normalize.py / benchmark.py harness itself)
+jiwer>=3.0.0
+
+# Install ONLY the backend(s) you're actually benchmarking — these are
+# heavy and you don't need all of them at once.
+# omnilingual-asr>=0.1.0          # for omnilingual_ctc_300m / omnilingual_llm_7b
+# openai-whisper>=20231117         # for whisper_large_v3
+# transformers>=4.40.0             # for ncair1_yoruba / mms_1b_all
+# torch>=2.2.0                     # required by all model backends
+
+# Needed for pull_permissive_training_data.py / pull_fleurs_permissive.py
+# (Option (c) permissive-only training data pull — see PLAN.md).
+# NOTE: datasets>=4.x has dropped script-based dataset support and defaults
+# to requiring torchcodec for audio decoding — both scripts work around
+# this (Parquet-native mirrors, decode=False + soundfile), documented in
+# their docstrings. Don't add torchcodec here; it isn't needed.
+datasets>=4.0.0
+huggingface_hub>=0.20.0
+python-dotenv>=1.0.0
+soundfile>=0.12.1

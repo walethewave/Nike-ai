@@ -1,0 +1,112 @@
+{
+  "base_model": "steja/whisper-small-yoruba",
+  "n_train": 150,
+  "n_eval": 30,
+  "epochs": 3.0,
+  "max_steps": null,
+  "learning_rate": 5e-06,
+  "warmup_ratio": 0.1,
+  "train_sec": 644.3,
+  "device": "mps",
+  "wer_trajectory": [
+    {
+      "epoch": 0.0,
+      "tone_agnostic_wer": 0.5752,
+      "n": 10,
+      "label": "zero_shot_baseline"
+    },
+    {
+      "epoch": 1.0,
+      "tone_agnostic_wer": 0.6462,
+      "n": 10,
+      "label": "training"
+    },
+    {
+      "epoch": 2.0,
+      "tone_agnostic_wer": 0.6038,
+      "n": 10,
+      "label": "training"
+    },
+    {
+      "epoch": 3.0,
+      "tone_agnostic_wer": 0.5519,
+      "n": 10,
+      "label": "training"
+    }
+  ],
+  "zero_shot_baseline": {
+    "tone_sensitive": {
+      "mode": "tone_sensitive",
+      "wer": 0.7168,
+      "cer": 0.3064,
+      "n": 30
+    },
+    "tone_agnostic": {
+      "mode": "tone_agnostic",
+      "wer": 0.5752,
+      "cer": 0.2134,
+      "n": 30
+    },
+    "label": "zero_shot_baseline",
+    "sample_predictions": [
+      {
+        "reference": "Bí o bá fẹ́ kọ́ nípa jíju boomerang tó padà sí ọ lọ́wọ́, se àrídájú pé o n.",
+        "hypothesis": "bí o bá fẹ́ kọ́ nípa jíju boomerang tó padà sí ọ lọ́wọ́ se àrídájú pé o n"
+      },
+      {
+        "reference": "Súùtù jẹ́ aṣọ okoòwò àwọn alájọse sì ma ń fi orúkọ ìdílé tàbí àpèlé iṣẹ́ perawọn.",
+        "hypothesis": "súutú jẹ́ aṣọkò oò àwọn alájọ se sí ma n fi orúkọ ìdílé tàbí àpelé iṣẹ́ pèràwọn"
+      },
+      {
+        "reference": "Gbogbo iwole okuta na, ti won pe ni “Awon Omo Iya Obirin Meje”, fe to mita 100 si 250 (ese 328 to 820).",
+        "hypothesis": "ogbo ìwọ́lè okuta náà ti wọ́n pe ìní àwọn ọmọ iyà òbè rín méjì fẹ́tòmítà ọ̀gọ́rùn sí igba lẹ́ni ààdọ́ta ẹsẹ̀ 3d20-8"
+      },
+      {
+        "reference": "Jámánì jẹ ọ̀tá gbogbo ní àsìkò ogun àgbáyé kejì, èyí tó yọrísí ìfọwọ́sowọ́pọ̀ láàrin ilẹ̀ USSR àti USA. Pẹ̀lú òpin sí ogun náà, ifigagbaga ètò, ìlànà àti àṣà ló mú àwọn orílẹ̀-èdè náà túká .",
+        "hypothesis": "jámìí ní jẹ́ ọ̀tà abògò ní àsìkò ogun àgbáyíkìjẹ́ èyí tó yọrí sí ìfọ̀sọ ọ̀pọ̀ láàrin ilẹ̀ ussr àti ussr pẹ̀lú òpin sí oguná ìfígàgbága ìdò ìlànà àti àṣàlómú àwọn rí d"
+      },
+      {
+        "reference": "A ní ìrírí àkókò gẹ́gẹ́ bí ìṣẹ̀lẹ̀ tó ń ṣẹ̀ lẹ́sẹsẹ láti ọjọ́ iwájú wá sí àkókò yìí lọ sẹ́yìn.",
+        "hypothesis": "a ní ìrírí àkókò gẹ́gẹ́ bí ìṣẹ̀lẹ̀ tó ń ṣẹ̀ lẹ́sẹsẹ láti ọjọ́ iwájú wá sí àkókò yìí lọ sẹ́yìn"
+      }
+    ]
+  },
+  "finetuned": {
+    "tone_sensitive": {
+      "mode": "tone_sensitive",
+      "wer": 0.7381,
+      "cer": 0.3439,
+      "n": 30
+    },
+    "tone_agnostic": {
+      "mode": "tone_agnostic",
+      "wer": 0.6142,
+      "cer": 0.2596,
+      "n": 30
+    },
+    "label": "finetuned",
+    "sample_predictions": [
+      {
+        "reference": "Bí o bá fẹ́ kọ́ nípa jíju boomerang tó padà sí ọ lọ́wọ́, se àrídájú pé o n.",
+        "hypothesis": "bí o bá fẹ́ kọ́ nípa jíju boomerang tó padà sí ọlọ́wọ́ ṣe àrídájú pé o n."
+      },
+      {
+        "reference": "Súùtù jẹ́ aṣọ okoòwò àwọn alájọse sì ma ń fi orúkọ ìdílé tàbí àpèlé iṣẹ́ perawọn.",
+        "hypothesis": "Sùtu jẹ́ aṣọ kọ́ owo àwọn alájọ se, sì ma n fi orùkọ́ ìdílé tàbí àpelé iṣẹ́ péra wọn."
+      },
+      {
+        "reference": "Gbogbo iwole okuta na, ti won pe ni “Awon Omo Iya Obirin Meje”, fe to mita 100 si 250 (ese 328 to 820).",
+        "hypothesis": "ọ̀gbò ìwọ́lé okúta náà tí wọ́n pè ní àwọn ọmọ iyà òbèríméje fẹ́to ó mta ọgọ́rùn sí igba lẹ ni àádọ́ta ẹsẹ 3/28-8/20"
+      },
+      {
+        "reference": "Jámánì jẹ ọ̀tá gbogbo ní àsìkò ogun àgbáyé kejì, èyí tó yọrísí ìfọwọ́sowọ́pọ̀ láàrin ilẹ̀ USSR àti USA. Pẹ̀lú òpin sí ogun náà, ifigagbaga ètò, ìlànà àti àṣà ló mú àwọn orílẹ̀-èdè náà túká .",
+        "hypothesis": "jẹ́mìnì jẹ́ ọ̀tá abọ̀gò ní́ àsìkò ogun agbáí kèjẹ́, èyí tó yọrí sí i foọ́sọọ́ pó láàrin ilẹ̀ ussr àti USA,̣ pẹ̀lú òpin sí oguná́ i figagbága ìtó,́ ilà náà ti àṣà lú mún àwọn òlídìná"
+      },
+      {
+        "reference": "A ní ìrírí àkókò gẹ́gẹ́ bí ìṣẹ̀lẹ̀ tó ń ṣẹ̀ lẹ́sẹsẹ láti ọjọ́ iwájú wá sí àkókò yìí lọ sẹ́yìn.",
+        "hypothesis": "àní ìrírí àkókò gẹ́gẹ́ bí ìṣẹ̀lẹ̀ tó ń ṣẹ̀ lẹ̀sẹ̀sẹ̀ láti ọjọ́ iwájú wá sí àkòkò yìí lọ sẹ́yìn."
+      }
+    ]
+  },
+  "wer_delta_tone_agnostic": 0.039
+}

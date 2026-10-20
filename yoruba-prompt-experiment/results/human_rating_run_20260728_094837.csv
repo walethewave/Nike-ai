@@ -1,0 +1,382 @@
+item_id,category,provider,provider_model,condition,input,reference,response,fluency_1to5,naturalness_1to5,task_accuracy_1to5,faithfulness_1to5,groundedness_1to5,code_switch_observed_yes_no,notes,llm_judge_faithfulness_1to5,llm_judge_groundedness_1to5,llm_judge_hallucination_detected,llm_judge_justification
+qa_factual_1,factual_qa,claude_haiku,us.anthropic.claude-haiku-4-5-20251001-v1:0,A_english_system_prompt,"Kí ni olú-ìlú Nàìjíríà, kí sì ni ìdí tí wọ́n fi yí i padà láti Èkó sí Abuja?","The capital of Nigeria is Abuja. The capital was moved from Lagos to Abuja in 1991. Reasons commonly cited: Abuja is centrally located within Nigeria (more neutral/accessible to all ethnic and regional groups than Lagos, which is on the coast and associated with the Yoruba southwest), Lagos was severely overcrowded, and Abuja was a planned city built specifically to serve as the federal capital.","Olúìlú Nàìjíríà jẹ́ àwọn ọba àti àwọn àgbà tí wọ́n ń ṣe àkóónú lórí àṣẹ ìjọba àti ìgbésẹ̀ àgbayé ló ìsalẹ̀ ilé ìjọba.
+
+Nípa ìdí tí wọ́n fi yí Abuja padà láti Èkó:
+
+**Ìdí àkọ́kọ́** - Èkó ti di onígbogbo pẹ̀lẹ̀pẹ̀lẹ̀, kò sì nípa yiyà ọmọ-ilé tuntun. Wọ́n nílò ìlú tuntun tí yóò mú ẹ̀kó jẹ́ àgbègbè gbogbo ènìyàn.
+
+**Ìdí kejì** - Abuja wà ní àárín Nàìjíríà, nítorí náà ó dáa fún gbogbo àwọn ìpínlẹ̀. Èkó sì wà ní ìlàjì, kò tó àrín ìlú náà.
+
+**Ìdí kẹtà** - Wọ́n rò pé orúkọ tuntun, ìlú tuntun, àti ẹ̀kó tuntun yóò mú ìbámu àti ìfẹ́ràn dé ara wọn wà fún gbogbo àwọn ènìyàn tí wọ́n wà ní àwọn ìpínlẹ̀ òòrò àti ìwọ̀-oòrùn.
+
+Nítorí àwọn ìdí wọ̀nyìí, tí wọ́n pẹ̀lú ìmọ̀ tó ga pẹ̀lú ìgbékọlé ìbámu, ni wọ́n gbé olúìlú àti ilé ìjọba gba sí Abuja ní ọdún 1991.",,,,,,,,3,3,True,"The response gets the key facts right (Abuja, 1991, centrality, Lagos overcrowding), but the opening sentence fails to state that Abuja is the capital and instead gives an incoherent/fabricated definition about kings and elders; other passages are garbled and unsupported."
+qa_factual_1,factual_qa,claude_haiku,us.anthropic.claude-haiku-4-5-20251001-v1:0,B_yoruba_system_prompt,"Kí ni olú-ìlú Nàìjíríà, kí sì ni ìdí tí wọ́n fi yí i padà láti Èkó sí Abuja?","The capital of Nigeria is Abuja. The capital was moved from Lagos to Abuja in 1991. Reasons commonly cited: Abuja is centrally located within Nigeria (more neutral/accessible to all ethnic and regional groups than Lagos, which is on the coast and associated with the Yoruba southwest), Lagos was severely overcrowded, and Abuja was a planned city built specifically to serve as the federal capital.","# Olú-ìlú Nàìjíríà
+
+Olú-ìlú Nàìjíríà ni **Abuja** lọ́wọ́ báyi. A yí i padà láti **Èkó** (Lagos) sí Abuja ní ọdún **1991**.
+
+## Ìdí tí wọ́n fi yí i padà:
+
+**1. Ìpinlẹ̀ àti àjọ̀ṣe**
+- Èkó jẹ́ ìlú ọ̀wọ́ kan ìlọ́ àti ìpilẹ̀ iye-ọ̀rọ̀. Wọ́n fẹ́ ti ìpinlẹ̀ yò padà sí iddí tó ní àárin ilẹ̀ Nàìjíríà láti dá àjọ̀ṣe rẹ ní àárín.
+
+**2. Ìfẹ̀sọ ọ̀pọ̀lọpọ̀ àwọn ẹgbẹ́ èwe**
+- Èkó jẹ́ ìlú tó ní ìpinlẹ̀ yìí ás, àti èwe agbofinro nìyí, nítorí àìmọ̀ àìfinúayé àwọn èwe ọgbà. Abuja yoo ti a yò ní ìyàlẹnu tó dín àlè.
+
+**3. Ìgbésẹ̀ ìbadàn àti ìlera**
+- Abuja jẹ́ iddí tí wọ́n yan nítorí àmọ̀, igbalawo, àti àwọn ìmọ̀ tímọ̀ jù. A tun lè ṣe àkósile ìpinlẹ̀ wo ní ìbadàn àti hóhò àyé.
+
+**4. Àwọn ìjọba nìkan ní àkósile**
+- Wọ́n ran àwọn ẹgbẹ́ àti obìrin-ọ̀pọ̀ sí Abuja láti gbé ní ìbú ńláti ara wọn, eyí tun ń fún ẹnìkọ̀ẹni ìfẹ́jọ ní iwájú.
+
+Nítorí àyẹ yìí, Abuja jẹ́ olú-ìlú Nàìjíríà tó ń dí àárín àti ìkò àjọ̀ṣe yáradà.",,,,,,,,3,3,True,"The core facts (Abuja is the capital, moved from Lagos in 1991, central location) are correct and grounded, but the reasoning sections are largely incoherent Yoruba with garbled/invented rationales (e.g., youth groups, 'obìrin-ọ̀pọ̀', Ibadan references) not supported by the reference; it also omits the planned-city and overcrowding points clearly."
+advice_1,advice,claude_haiku,us.anthropic.claude-haiku-4-5-20251001-v1:0,A_english_system_prompt,Mo fẹ́ bẹ̀rẹ̀ iṣẹ́ àṣàrò-ọwọ́ kékeré ní ìlú mi. Kí ni àwọn ìmọ̀ràn mẹ́ta tí o lè fún mi tí yóò ràn mí lọ́wọ́ láti ṣàṣeyọrí?,,"Pẹ́lẹ́ pẹ́lẹ́, mo yóò fún ọ ní àwọn ìmọ̀ràn tí yóò dára fún ọ:
+
+**Ìmọ̀ràn Kìnní: Ṣàwárí ohun tí ó dọ́gba fún ọ**
+
+Kọ́kọ́, lo wáyé àwọn ìṣẹ́ àṣàrò-ọwọ́ tó wà nílẹ̀ rẹ. Ṣe kín ni àwọn ènìyàn wọ̀nyí n-tàbù? Kí ni àwọn ohun tí wọn máa nílò? Ìjáde fún iṣẹ́ tí o bá ní ó dọ́gba fún ọ àti fún ènìyàn nílẹ̀ rẹ.
+
+**Ìmọ̀ràn Kejì: Kékeré lọ́wọ́ kékeré ṣíṣẹ̀**
+
+Má bẹ̀rẹ̀ níbi tó pọ̀. Ṣé àìdé kan, gbìyànjú àwọn ọ̀ṛun kékeré tí yóò ṣiṣẹ́ dáradára. Gba àwo-dídì rẹ̀ náà lọ́pọ̀, kí o sì ní ìgbà láti ṣíṣẹ̀ dáadáa. Nígbà tí o bá rí ìjasídè ìbámò, lẹ́hìnna ni o lè sì fọ́ ní ǹkan tuntun.
+
+**Ìmọ̀ràn Kẹta: Ṣe àbá àti ire-ọlọ́run**
+
+Ṣe àbá àti ìkìtì pẹ̀lú àwọn ènìyàn tó ń-ṣiṣẹ́ nílà. Mópin àwọn olùṣọ̀ràn, àwọn aṣàmúlò, àti àwọn tó máa járe rẹ. Kí ìrírú nìyìi yóò ràn ọ lọ́wọ́ láti dáǹfò àti láti parapọ̀.
+
+Àìkù àti árìnwálé jẹ́ ìkóko nìyìi. Máa ṣiṣẹ́ ní ìgbá tí ọ bá ní àṣiko.",,,,,,,,5,3,False,"The response gives generic business advice with no invented facts, statistics, or sources, so nothing is fabricated. However, it does provide three tips as asked but the Yoruba is garbled and partly incoherent, weakening how clearly it addresses the request."
+advice_1,advice,claude_haiku,us.anthropic.claude-haiku-4-5-20251001-v1:0,B_yoruba_system_prompt,Mo fẹ́ bẹ̀rẹ̀ iṣẹ́ àṣàrò-ọwọ́ kékeré ní ìlú mi. Kí ni àwọn ìmọ̀ràn mẹ́ta tí o lè fún mi tí yóò ràn mí lọ́wọ́ láti ṣàṣeyọrí?,,"Báwo! Mo dùnnú pé o fẹ́ ṣiṣẹ́ àṣàrò-ọwọ́. Èyí ni àwọn ìmọ̀ràn tó le ràn ọ lọ́wọ́:
+
+## 1. Ṣàyẹ̀wò ọjà rẹ dáadáa
+
+Ṣàyẹ̀wò àwọn ẹnìkan tó wà nínú ìlú rẹ tí wọ́n máa ń ra àṣàrò-ọwọ́. Wo ohun tí wọ́n ń fẹ́ jù, àti àwọn oníṣà tó wà ní àárín. Ìyẹn náà a tú fún ọ nípa àwọn ohun tó kópa nínú ẹ̀rẹ̀-èkó rẹ̀.
+
+## 2. Pèsè àwọn ohun ìṣiṣẹ́ tó ní àìkú tó kéré
+
+Ṣìrò nípa àwọn àlàyé àti ẹrù náà. Jè kí àwọn irinṣẹ́ rẹ - bíi àti ohun tí a filo àti awò - jẹ́ ńlá àti ọ̀rẹ̀ ọjọ́. Fura nípa owó àti ìpilẹ̀-àṣẹ tó pẹ́.
+
+## 3. Kọ̀ǹtànú owó tánná ati dáadáa
+
+Jẹ́ kí àwọn olùpè rẹ̀ mọ àwọn ìmúlẹ̀nù owó rẹ. Tètè náà lo àpò tó tàwọ́ fún ọ, àti ko ò kàn nípa àwọn owó àti ohun tí wọ́n ń gbé lé ọ. Hù owó rẹ nítòótọ́ pẹ̀lú àwọn àbùjá àti akóónú.
+
+Àríyànjiyàn! Mo fẹ́ kí o ní àṣeyọrí nípa iṣẹ́ àṣàrò-ọwọ́ rẹ! 🎨✨",,,,,,,,4,3,False,"The response offers generic business advice (market research, tools/costs, pricing/finances) without inventing statistics or sources, so no clear factual fabrication. However, the Yoruba is largely incoherent and garbled, making the advice vague and only loosely responsive to the request for three actionable tips."
+explain_1,explanation,claude_haiku,us.anthropic.claude-haiku-4-5-20251001-v1:0,A_english_system_prompt,Ṣàlàyé bí òjò ṣe ń rọ̀ fún ọmọdé kan tí kò tí ì mọ̀ nípa ìmọ̀ sáyẹ́nsì rárá.,"Rain forms when the sun heats water in oceans, rivers, and lakes, causing it to evaporate into water vapor that rises into the air. As it rises and cools, the vapor condenses around tiny particles into water droplets, forming clouds. When enough droplets combine and become heavy enough, gravity pulls them down as rain.","Ó dára gan-an! Èmi yóò ṣàlàyé ìtumọ̀ òjò nípa ọ̀nà tí ọmọdé le ìmọ̀ rẹ̀.
+
+**Kí ni òjò?**
+
+Òjò jẹ́ omi tí ó ń sàsìn lọ láti ọ̀run wá lílẹ̀. Nígbà tí oòrùn fi gbẹ́bẹ̀ omi tó wà nínú okun àti awọ́n odo, omi náà a di èrò àti ó fògo sókè lọ sí ọ̀run. Àwọ́n èrò nìyìí a pọ̀ síra síra tí wọ́n a dé sókè púpọ̀.
+
+**Kí ni ó ń ṣẹlẹ̀ nígbà tó gbẹ́kẹ̀?**
+
+Nígbà tí awọ́n èrò náà dé sí ọ̀run tí ó tùtù, wọ́n a ṣe nǹkan tí a npe ni ""titiipa."" Omi ká di nǹkan tí ó ń rọ̀ láti ọ̀run sìnú wàrà. Nígbà tí awọ́n wàrà náà wà púpọ̀ gan-an, wọ́n a tó ìsalẹ̀ padà lọ sílẹ̀ nípa ẹkún.
+
+**Kí ló sàlàyé ohun yìí fún ọmọdé?**
+
+Ìwé àti awọ́n gbogbo nǹkan tí ó súpúsúpú nípa òjò ṣe léèké ìjẹ́bíjẹ́. Omi rírà lóye, omi tó túbọ̀, àti omi tí ó sàn fún gbimisi — òjò jẹ́ ìnilẹ̀ àwọn ohun wọ̀nyí! Ó yẹ kí ọmọdé mọ̀ pé òjò ní ìdí ìmọ̀ kan, kò sì jẹ́ ohun tó ní àdí.",,,,,,,,3,3,False,"The response conveys the core reference facts (sun heats water, it rises, cools, condenses, falls when heavy), but the Yoruba is garbled and semantically confused (e.g., 'wàrà'/milk used for droplets, 'ẹkún'/crying for gravity), and the final paragraph is largely incoherent filler rather than grounded explanation."
+explain_1,explanation,claude_haiku,us.anthropic.claude-haiku-4-5-20251001-v1:0,B_yoruba_system_prompt,Ṣàlàyé bí òjò ṣe ń rọ̀ fún ọmọdé kan tí kò tí ì mọ̀ nípa ìmọ̀ sáyẹ́nsì rárá.,"Rain forms when the sun heats water in oceans, rivers, and lakes, causing it to evaporate into water vapor that rises into the air. As it rises and cools, the vapor condenses around tiny particles into water droplets, forming clouds. When enough droplets combine and become heavy enough, gravity pulls them down as rain.","# Òjò Ṣe Ń Rọ̀ - Ìtúpálẹ̀ Fún Ọmọdé
+
+Kì í ṣe nǹkan tó ń ṣẹlẹ̀ ní orun tó jẹ́ àdá tó kéré gan-an gan! Èmi ó ṣàlàyé ní ọ̀nà tí ó rọrùn:
+
+## Ìbẹ̀rẹ̀ Nǹkan
+
+Ẹ̀yin mọ̀ bí omi ṣe ń rọ̀ ní ilẹ̀ àti ní ẹ̀kúnun? **Òjò jẹ́ omi tí ó dé ní ófú kan!**
+
+## Àkiyèsi Iṣẹ̀lẹ̀ Kan
+
+Àgbà nikan rí bí:
+
+1. **Omi nínú ìlú** - lẹ̀ẹ̀kọ̀ọ̀, ètì, òsì
+2. **Ọ̀ran ìfẹ́fẹ́** - omi yìí ń bọ̀ sí ófú erè erè (tí a máa ń rí: *ìtẹ́ wúrà*)
+3. **Ófú dun pẹ̀lú omi** - omi tí ó mọ́ rìn àyíká (omi òjò naa tìrẹ̀!)
+4. **Òjò** - omi tó ń yọ̀ padà sílẹ̀
+
+## Àlàyé Ní Ọ̀nà Tí Ó Rọrùn
+
+**Máa dá àpẹrẹ àìlẹ̀:**
+
+""Ẹ dákẹ̀! Máa ṣe ọjọ́ pẹ̀lú fìlà rẹ nìkan:
+- **Kì̩ kì̩** - omiị tí ó rọ̀ sínú tiinu rẹ
+- **Àgbo nǹkan pẹ̀pẹ̀** - omi ló rọ̀ ká ní
+- **Ara ẹ̀** - omi ló rọ̀ rẹ nípa àárín ìgbà
+- **Ní orun** - omi ńlá ó nkú! Ó bọ̀ sórí àwọn ẹ̀kúnun àti ọ̀pá nígbà ìfẹ́fẹ́.""
+
+## Kékeké Àlàyé
+
+Òjò **kìíkìí** jẹ́ omi tó padà padà nìnú àwọn gbogbo inú ófú pẹ̀lú ìfẹ́fẹ́ àti oòrùn. Ó ní ìmọ̀ láìka ati ìbònú dídùn púpọ̀!
+
+---
+
+*Ìpilẹ̀ yìí máa jẹ́ àwọn ọ̀gbà fún ìmọ̀ sáyẹ́nsì níkàn! 🌧️*",,,,,,,,2,2,True,"The response is largely incoherent Yoruba that fails to convey the evaporation–condensation–gravity cycle from the reference; it only vaguely gestures at water, wind, and sun while inserting nonsensical or unsupported statements, so key facts are missing or garbled rather than accurately grounded."
+story_1,creative,claude_haiku,us.anthropic.claude-haiku-4-5-20251001-v1:0,A_english_system_prompt,Kọ ìtàn kékeré kan (nǹkan bí ẹ̀ẹ́dẹ́gbẹ̀ta ọ̀rọ̀) nípa ọkùnrin kan tí ó ṣàwárí ohun àràmàǹdà nínú igbó.,,"# Ọkùnrin àti Ohun Àràmàǹdà Nínú Igbó
+
+Ọkùnrin kan tí á máa pè ní Kólá, ó ṣeé tun kọ́kọ́rọ̀ nínú ilé rẹ̀ gbogbo ọjọ́. Ó ní ìfẹ́ nìyì gidi gidi, nítorí náà ni ó pàdé àwọn ọ̀rẹ́ rẹ̀ láti gùnwé ilẹ̀kùn igbó tí wọ́n ò tí ì rìn padà sí ìbẹ̀rẹ̀ fún ọdún.
+
+Ní ọjọ́ tí Kólá wọ inú igbó náà, okú rèé múra sí tẹ́rẹ̀ ní alóko àkọọ̀kan nínú àwọn igi ńlá. Ó dúró, ó wòó, àti ó gbọ́ ohun tí ó ń tẹ̀ ẹ̀ nǹkan bí òòrọ̀ iroko tí ó jáde nípandá. Ó lọ síbẹ̀, ó sì rí i—àwọ́ òòrò ńlá kan pẹ̀lú eegun tí ó dándìn gbìyìn.
+
+Kólá ò bẹ̀rù àbí ò sìsọ̀. Ó dìde kalẹ̀ kalẹ̀, ó sì máa jẹ̀ gbòrò ata kan láti inú àkó rẹ̀. Ní ìkíìkí kan, àwọ́ òòrò náà sì dúró, ó sì wo ó léyìí. Wọ́n jẹ́ eniyan méjì pẹ̀lú ìdákẹ́ ìdákẹ́.
+
+Làárin àwọn ìṣẹ̀jú mélòó, ẹ gbọ́ ohun iroko náà pé ""Gbábò!"" ó sì mò sẹ̀nù rẹ̀ pátá, ó sì sálà sínú igbó. Kólá níilé sì, àkọ́ rẹ̀ múra níwájú, ó sì ní ìmùlẹ̀ nìkan nítorí gbajúmo tí ó ìwo ná.
+
+Ó tẹ̀ síbẹ̀, ó sì ìwé ìtàn yìí fún àwọn ọ̀rẹ́ rẹ̀.",,,,,,,,4,2,False,"As fiction it invents no checkable external facts, so faithfulness is largely fine. However, the response is far shorter than the requested ~500 words and the Yoruba is largely incoherent/garbled, so it poorly fulfills the task."
+story_1,creative,claude_haiku,us.anthropic.claude-haiku-4-5-20251001-v1:0,B_yoruba_system_prompt,Kọ ìtàn kékeré kan (nǹkan bí ẹ̀ẹ́dẹ́gbẹ̀ta ọ̀rọ̀) nípa ọkùnrin kan tí ó ṣàwárí ohun àràmàǹdà nínú igbó.,,"# Ọkùnrin Àràmàndà
+
+Orí kan wà ní ìlú, tó jẹ́ ọkùnrin tí ara rẹ̀ ò bá ayaba rẹ̀ ni, nítorí pé iye rẹ̀ ní àìlẹ́kù. Ó nílò láti lo igbó láti wá ewe tó yóò gba ayaba rẹ̀ ní ìyalẹ̀nu.
+
+Nígbà tó dé ọ̀tun igbó, ó rí òkìkì tí ó ń wuwe nínú àgbọ̀. Orí yìí dúró, ó sì béèrè lówó òkìkì náà pé, ""Ìwọ, àwọn ewe rílẹ̀ yìí, èwo ni tó ní agbara láti gba àràmàndà?""
+
+Òkìkì náà dáhùn: ""Bàbá mi, ewe tí ó wà níhìnin ní odi igbó yìí ni. Ìwọ máa ní láti kọjá lọ́dọ̀ ẹlẹ́dẹ̀ ọkọ́, ò sì máa ní láti bèrè ọ̀rọ̀ ònà lówó ọ̀dẹ̀ òkúta.""
+
+Orí náà wá kọjá lọ́dọ̀ ẹlẹ́dẹ̀ ọkọ́, èyí tó ní agbara gíga. Ẹlẹ́dẹ̀ náà béèrè: ""Níbo ni ìwọ ń lọ?""
+
+""Mo ń wá ewe àràmàndà,"" ó sáré dáhùn.
+
+Ẹlẹ́dẹ̀ náà ní: ""Kú ojú rẹ! Tó bá rí òkúta lówó ọ̀dẹ̀ yẹn, bèrè ní gbangba, àní kí o máa débi.""
+
+Orí dé ibẹ̀, ó ri òkúta tí ó dúró jẹ́ wọ̀ọ̀. Ó béèrè: ""Bàbá mi, ewe àràmàndà wà níbo?""
+
+Òkúta rẹ hùn: ""Mo níye rẹ, ṣùgbọ́n rárá, kò máa gún ọ fún ọ́nà. Lo sílẹ̀, ara rẹ àti ọkọ rẹ̀ ní tìì láti kò ìlú kan mọ́ àràmàndà.""
+
+Orí náà tún padà ní ibi tí ayaba rẹ̀ wà. Ó sọ rẹ̀ gbogbo àwọn ìro tí ó gbọ́. Ayaba dúró, ó sì ní: ""A sísan? Ìwọ, ori, àwọn ẹranko jẹ́ aṣọbẹ àwọn iṣẹ́ igbó. Àràmàndà kìí ṣe ohun tí a fi ọ̀rọ̀ máa rí. Àràmàndà wà nínú àídí. Wá lo lò ni.""
+
+Orí náà tìrẹ̀, ó sì ní àbájáde rẹ̀",,,,,,,,4,2,False,"As fiction, it makes no checkable factual claims, so faithfulness is largely fine. However it poorly addresses the task: the Yoruba is largely incoherent/ungrammatical, the protagonist is confusingly called 'Orí', the mysterious forest discovery is never really depicted, it is far short of ~500 words, and it ends mid-sentence."
+opinion_1,reasoning,claude_haiku,us.anthropic.claude-haiku-4-5-20251001-v1:0,A_english_system_prompt,Kí ni èrò rẹ nípa lílo fóònù alágbèéká láàrin àwọn ọmọ ilé-ìwé? Ṣé ó dára tàbí ó burú? Ṣàlàyé ìdí.,,"# Nípa Lílo Fóònù Alágbèéká Nínú Ile-ìwé
+
+Èrò mi nípa ohun yìí jẹ́ pé ó ní ẹ̀rọ̀ àti ìṣoro. Ẹ jẹ́ kí n sàlàyé méjì:
+
+## **Ẹ̀rọ̀ (Anfaani)**
+
+- **Ìkẹ́kọ̀ ọmọ** pẹ̀lú ohun ìwé ìjìnlẹ̀ tó wà lábẹ́ wọ́n láti pọ̀ ìmọ̀ nwọ́n
+- **Ṣíṣe àtúnṣe àti iṣẹ́ idile** - wọ́n lè hùm ìbéèrè nínú ìlana àti gidigidi
+- **Àbá fún àwọn onítọ̀jú** - àwọn ọmọ ìlẹ̀kọ̀ọ́ dúndún lè tẹ̀ jọ pẹ̀lú àwọn òjọ́gbọ́n
+
+## **Ìṣoro (Àìdára)**
+
+- **Àti-ìloye tó pọ̀ nítorí ìtalábọ̀** - ọ̀pọ̀ àwọn ọmọ kò máa fìtípa sí iwe ìkẹ́kọ̀
+- **Àgbẹ̀sẹ̀ ilé-ìwé** - wọ́n le ní fún àwọn àǹfàní burúkú bíi yísù àti ìlokò jìnà
+- **Àìníṣe ère oní** - gbigbogbo àkókò wọ́n wà nílẹ̀ẹ̀ àti sálí ìfà ó, èyí tó yó fa wọ́n kúrò nínú ìkẹ́kọ̀
+
+## **Èrò Dídì**
+
+Ó dára nígbà tí a báa lò ó **pẹ̀lú àìgbẹ̀kẹ̀ àgbára ás-ìlú**, ṣùgbọ́n **kì í dára** nígbà tí ó di àṣíṣe nínú onígbagbọ́.",,,,,,,,4,3,False,"The response makes no invented statistics or fake sources, only general pros and cons, so factual fabrication is minimal. However the Yoruba is largely garbled and partly incoherent, weakening how clearly it addresses the question despite following the requested pro/con/opinion structure."
+opinion_1,reasoning,claude_haiku,us.anthropic.claude-haiku-4-5-20251001-v1:0,B_yoruba_system_prompt,Kí ni èrò rẹ nípa lílo fóònù alágbèéká láàrin àwọn ọmọ ilé-ìwé? Ṣé ó dára tàbí ó burú? Ṣàlàyé ìdí.,,"# Lílo Fóònù Alágbèéká Láàrin Àwọn Ọmọ Ilé-ìwé
+
+Èrò mi nípa ohun yìí jẹ́ **alásopọ̀**, nítorí pé ó ní ìwájú àti èàrá.
+
+## **Ìwájú Àti Èìtumò**
+
+**Dára:**
+- Ó ṣe ìrànlọ́wọ́ nínú **ọkọ̀ ẹ̀kọ́** - àwọn ọmọ lè ṣàwárí ìmọ̀ kankan tí ó yẹ sílẹ̀
+- Ó máa ń **dìtọ́ agbára ìbánújẹ́** tí ó ń ba àwọn ọmọ níja
+- Ó **kó àwọn ẹbí papọ̀** - àwọn ìyá àti àwọn bàbá lè tẹ̀ ẹkúsì sí àwọn ọmọ wọn
+- **Ìwádìísí aláiwọ̀ nípa àwọn nǹkan tuntun** ló ni ohun yìí fúnni wa
+
+## **Èàrá Àti Ìjáwósè**
+
+**Burú:**
+- Àwọn ọmọ `le` **gbígbé ìgbésẹ̀ àti ìwà àìdlẹ̀** sórí fóònù
+- Ó le **sẹ́rọ̀ àfaya nípa àwọn ìlú àti ìwà èníyàn tí ó dàbí àìnítìjú**
+- **Ìkóra ojú àti àyà ìjáde** sẹ́wù nígbà tí á fi fi lọ́wọ́ wọ̀pọ̀
+- Ó le **yá ìwájú ẹ̀kọ́** tí ara ilé-ìwé yóò máa ń ṣe
+
+## **Òkète Tó Dára Júlọ**
+
+**Áwọ̀rán ní:**
+- **Àkókò lílo tí ó píní** - bí 30-60 àkọ́kọ̀ nítòójú àsìkò kan
+- **Tukbọ̀ àti ìbáláyé** - fúnni àwọn ọmọ ìgbásilẹ̀ àti kó wọn sílẹ̀
+- **Ìtẹ̀sílẹ̀ nípa ohun àáyè** - ẹkọ láti àwọn olùkọ́
+- **Ìdánimọ̀ gbígbé fóònù** - jẹ́ kí ó kóko àsìkò àáyè pẹ̀lú àwọn ẹbí
+
+Nítótó, **fóònù alágbèéká jẹ́ ohun àtipẹ́** - ní kò tí ì jẹ́ àjẹ́ tàbí òní, àìní á tẹ̀ètó rẹ̀ ní ìwájú ìwé nítorí àìní a.",,,,,,,,4,2,False,"The response makes no invented statistics or fake sources (only a vague '30-60' time suggestion), so factual fabrication is minimal, but the Yoruba is largely incoherent and semantically garbled, so it only nominally addresses the balanced good/bad question."
+instruction_1,task_instruction,claude_haiku,us.anthropic.claude-haiku-4-5-20251001-v1:0,A_english_system_prompt,"Kọ àkọsílẹ̀ ìmúrasílẹ̀ oúnjẹ jollof rice ní ọ̀nà tí ó rọrùn láti tẹ̀lé, ní ìṣísẹ̀-n-tẹ̀lé.",,"# Àkọsílẹ̀ Ìmúrasílẹ̀ Oúnjẹ Jollof Rice
+
+## Àwọn ohun tí a nílò:
+
+- Ìrẹsi (2 eko)
+- Tomati pupa (4)
+- Onion (2)
+- Galik (3 clove)
+- Atarodo (2)
+- Malaridi (2 iyẹ̀)
+- Oyin (½ iyẹ̀)
+- Elu alubọ̀sá (½ iyẹ̀)
+- Iyọ̀ àti àta (oníye)
+- Epo mẹ̀rín (¼ iyẹ̀)
+- Omi (4 iyẹ̀)
+
+## Ìmúrasílẹ̀:
+
+**1. Ṣíṣe ayípadà tomati ati atarodo:**
+Yo tomati àti atarodo nínú olupo ohun ìṣúfihàn. Tun wọ́n kiri tán àti fi sí eko kan.
+
+**2. Gbé epo lórí àpò:**
+Gbé epo náà lé dé oòrùn gíga. Gbé onion pẹ̀lú galik sílẹ̀ títí tó wú.
+
+**3. Rán ayípadà tomati sílẹ̀:**
+Fi ayípadà tomati àti atarodo sórí onion náà. Dàṁbídìẹ fún iṣẹ́jú méta.
+
+**4. Fi ìrẹsi wọ́:**
+Rọ ìrẹsi pọ̀ títí tó gbó oòrùn nínú ayípadà náà (iṣẹ́jú méjì).
+
+**5. Fi omi àti elu alubọ̀sá wọ́:**
+Gbé omi pẹ̀lú elu alubọ̀sá sórí ìrẹsi. Gbé àìdójú fún iṣẹ́jú kan.
+
+**6. Dán un:**
+Fi orí àpò sórí un. Dàn un lórí oòrùn kékeré fún iṣẹ́jú mẹ̀wá títí tó yé.
+
+**7. Tẹ́tọ àti jẹ:**
+Dáwọ́ iyọ̀ àti àta. Tẹ́tọ àti ń ṣoríyìí kí ó dùn!",,,,,,,,3,3,True,"The response follows the requested recipe format, but the ingredient list includes implausible/odd items for jollof rice (e.g., honey, 'malaridi', 'epo mẹ̀rín') and the Yoruba is largely garbled with invented terms, plus cooking times (10 minutes for rice) are unrealistic. It addresses the task structurally but the content is partly incoherent and unsupportable."
+instruction_1,task_instruction,claude_haiku,us.anthropic.claude-haiku-4-5-20251001-v1:0,B_yoruba_system_prompt,"Kọ àkọsílẹ̀ ìmúrasílẹ̀ oúnjẹ jollof rice ní ọ̀nà tí ó rọrùn láti tẹ̀lé, ní ìṣísẹ̀-n-tẹ̀lé.",,"# Jollof Rice (Àkọsílẹ̀ Ìmúrasílẹ̀)
+
+## Àwọn Ohun Ní Pẹ̀ LÚ
+
+**Fún àwọn ènìyàn 4-6:**
+
+- Ìrìsì pẹ̀pẹ̀ 2 kẹ̀ègì (2 cups)
+- Òdódó tomati pẹ̀pẹ̀ 1 tin (400g)
+- Elu iyọ̀ pẹ̀pẹ̀ 1 kẹ̀ègì
+- Omi àfẹ́fẹ́ 3 kẹ̀ègì
+- Ìtànná pẹ̀pẹ̀ 2 (àti àwọn eyín rẹ̀ sálẹ̀)
+- Ata ose (pepper paste) 3 ibadandun
+- Àìru àti òjì díẹ̀ (garlic and ginger)
+- Àgò (onion) 1 (àti oke tí a gé rírì)
+- Òróbó (butter/oil) 3 ibadandun
+- Ìyọ̀ àti ata gbigbana láàrin itàkù
+
+---
+
+## Ìṣísẹ̀-n-Tẹ̀lé
+
+### Ìṣísẹ̀ Àkọ́kọ́
+
+1. **Ìrìsì gé:** Gé ìrìsì kí ó wá dì, tí o sì wọ́ nínú omi oòro fún àkókò díẹ̀. Sáré á òkè rẹ̀ síbẹ̀.
+
+2. **Àgò pẹ̀pẹ̀:** Dídì àgò nínú òróbó tó gbona lẹ́ẹ̀ títí ó tó ní ìwé fífẹ̀.
+
+### Ìṣísẹ̀ Èkejì
+
+3. **Àìru àti òjì:** Tẹ̀jú àìru àti òjì sínú àgò tó gbona, dídì títí ó dáa.
+
+4. **Ata ose:** Fi ata ose àti òdódó tomati sínú, mìmọ́ rẹ̀ kí ó bá àgò pẹ̀pẹ̀ daadaa. Tẹ sísẹ̀ fún àkókò díẹ̀.
+
+### Ìṣísẹ̀ Kẹta
+
+5. **Elu iyọ̀ àti ìtànná:** Fi elu iyọ̀ sínú oúnjẹ tí ó gbona tẹ́, tí o sì fi ìtànná àti òkè ayábó tí a gé rírì sínú.
+
+6. **Mìmọ́:** Mìmọ́ ohun gbogbo fún àkókò díẹ̀ (ní àfo àwẹ́kù 2-3).
+
+### Ìṣísẹ̀ Kẹrin
+
+7. **Fi omi àfẹ́fẹ́ sínú:** Pa omi àfẹ́fẹ́ tuntun sínú, jí kí o sì súnú.
+
+8. **Fi ìrìsì sínú:** Tẹ ìrìsì sálẹ̀ nínú, mìmọ",,,,,,,,4,3,False,"The recipe contains no fabricated external facts or citations, but the Yoruba vocabulary is largely garbled/invented (e.g., nonsense terms for rice, onion, measurements), making ingredients and instructions unreliable, and the response is cut off mid-step before completion."
+summarize_1,summarization,claude_haiku,us.anthropic.claude-haiku-4-5-20251001-v1:0,A_english_system_prompt,"Ṣe àkótán ọ̀rọ̀ yìí ní gbolohun mẹ́ta pàápàá: 'Ẹ̀kọ́ jẹ́ ọ̀nà kan pàtàkì láti mú ìdàgbàsókè bá orílẹ̀-èdè èyíkéyìí. Nígbà tí àwọn ọmọdé bá kàwé dáradára, wọ́n máa ń ní àǹfààní láti rí iṣẹ́ tí ó dára, kí wọ́n sì lè kópa nínú ìdàgbàsókè agbègbè wọn. Ṣùgbọ́n ní ọ̀pọ̀ ìgbà, àìní owó àti amáyédẹrùn tí ó dára ń dí àwọn ọmọdé lọ́wọ́ láti kàwé dáradára.'","Source text (Yoruba, to be summarized faithfully — the summary must not introduce claims absent from it): 'Education is a key way to bring development to any country. When children are well educated, they get better access to good jobs and can participate in developing their communities. But often, lack of money and good facilities prevents children from being well educated.'","Éhe ni àkótán ọ̀rọ̀ naa ní gbolohun mẹ́ta:
+
+**Àkótán Kìkì:**
+Ẹ̀kọ́ jẹ́ ọ̀nà pàtàkì fún ìdàgbàsókè orílẹ̀-èdè, ṣùgbọ́n àìní owó àti àmáyédẹrùn tó dára ń ké àwọn ọmọdé padà nípa kàwé.
+
+**Àkótán Àpamọ́:**
+Nígbà tí ẹ̀kọ́ dára bá wà, àwọn ọmọdé máa ní àǹfààní iṣẹ́ tó ní èrè púpọ̀, kí wọ́n sì lè ṣe ìran ní ìdàgbàsókè agbègbè wọn; ṣùgbọ́n ọ̀pọ̀lọpọ̀ àwọn ọmọdé kò le kàwé dáradára nítorí àìní owó àti ohun ìtumọ̀.
+
+**Àkótán Gigun:**
+Ẹ̀kọ́ pẹ̀lú ìtumọ̀ tó ní ànfààní jẹ́ ìǹfúnibálẹ̀ pàtàkì fún ìdàgbàsókè agbègbè àti ìpadasẹ̀ ọkùnrin àti obìnrin, ṣùgbọ́n nítorí àìní ohun ìtumọ̀ àti ẹ̀kọ́ tó kúnrere, ọ̀pọ̀ àwọn ọmọdé kò le pẹ ọwọ́ sí i, nítorí naa àìní owó àti amáyédẹrùn jẹ́ òkè ìlànà àlúdálùdá tí yóò ní ìbáradọ́ lórí ìdàgbàsókè.",,,,,,,,3,2,True,"The response ignores the instruction to produce a three-sentence summary, instead giving three differently-labeled summaries, and the third adds unsupported/garbled content (e.g., 'ìpadasẹ̀ ọkùnrin àti obìnrin' — gender-related claims — and vague notions absent from the source). Core points about education, jobs, community development, and lack of money/facilities are preserved, but the added material and format drift reduce groundedness."
+summarize_1,summarization,claude_haiku,us.anthropic.claude-haiku-4-5-20251001-v1:0,B_yoruba_system_prompt,"Ṣe àkótán ọ̀rọ̀ yìí ní gbolohun mẹ́ta pàápàá: 'Ẹ̀kọ́ jẹ́ ọ̀nà kan pàtàkì láti mú ìdàgbàsókè bá orílẹ̀-èdè èyíkéyìí. Nígbà tí àwọn ọmọdé bá kàwé dáradára, wọ́n máa ń ní àǹfààní láti rí iṣẹ́ tí ó dára, kí wọ́n sì lè kópa nínú ìdàgbàsókè agbègbè wọn. Ṣùgbọ́n ní ọ̀pọ̀ ìgbà, àìní owó àti amáyédẹrùn tí ó dára ń dí àwọn ọmọdé lọ́wọ́ láti kàwé dáradára.'","Source text (Yoruba, to be summarized faithfully — the summary must not introduce claims absent from it): 'Education is a key way to bring development to any country. When children are well educated, they get better access to good jobs and can participate in developing their communities. But often, lack of money and good facilities prevents children from being well educated.'","# Àkótán ọ̀rọ̀ tí a beèrè
+
+Ẹ̀kọ́ jẹ́ ọ̀nà pàtàkì tí ó lè mú orílẹ̀-èdè kan dàgbàsókè dáadáa. Nígbà tí àwọn ọmọdé bá ní ẹ̀kọ́ tó dára, wọ́n lè ní àǹfààní láti wá iṣẹ́ gidi àti kópa nínú ìdàgbàsókè agbègbè wọn. Síbẹ̀síbẹ̀, ọ̀pọ̀ àwọn ọmọdé kò le kàwé dáradára nítorí àìní owó àti àmáyédẹrùn tó wúlò.",,,,,,,,5,5,False,"The three-sentence summary accurately restates each point of the source text without adding new claims; only a minor heading was added, which is stylistic rather than fabricated content."
+conversation_1,casual_chat,claude_haiku,us.anthropic.claude-haiku-4-5-20251001-v1:0,A_english_system_prompt,"Bàwo ni o ṣe rí lónìí? Sọ báwo ni ọjọ́ rẹ ti rí fún mi, kí o sì bí mi lẹ́ẹ̀ẹ́kan náà nípa ọjọ́ tèmi.",,"Ẹ̀ ku ọjọ́ o! Àmi fẹ́ràn bí o ṣe béèrè nípa mi èyí náà.
+
+Lónìí, àmi dúpẹ́ fún ọjọ́ tó dára púpọ̀. Mo ti ṣiṣẹ́ nínú ìṣẹ́ ìfọ́rọ̀ tó, mo tún ṣe onímọ̀ràn pẹ̀lú àwọn ènìyàn tó béèrè lọ́wọ́ mi nípa pẹ̀lú àwọn ọ̀rọ̀ ìmọ̀ àti àlàyé. Mo bẹ̀rù pẹ̀ àwọn ìgbésẹ̀ àwọn ènìyàn ò lè ná ìwé mi ju, kódà bi nǹkan bákan.
+
+Àti fún ọjọ́ rẹ, àmi fẹ́ wá gbọ́ nípa rẹ! Mo fẹ́ rí bí ọjọ́ rẹ ti rí, kíni awọn nǹkan tó dára nínú rẹ? Ṣé o ṣe iṣẹ́ tó jẹ́ ìyalẹ̀nu tó, tàbí o fúnra rẹ nípa ìfẹ́ jẹ́ àti ìbámu pẹ̀lú àwọn ènìyàn tó fi dídùn mú? Mo dúpẹ́ tó o ṣèlè gbé èyí pè.
+
+Ẹ jẹ́ kí àwọn ọjọ́ wa jẹ́ àdúmọ̀ ati oore! 🌟",,,,,,,,4,4,False,"The response stays in casual conversational territory and makes no checkable factual claims, though it describes having a 'day' with activities, which is a mild anthropomorphic fabrication typical of small talk. It addresses both parts of the task (describing its day and asking about the user's), but the Yoruba is garbled and partly incoherent, weakening the fit."
+conversation_1,casual_chat,claude_haiku,us.anthropic.claude-haiku-4-5-20251001-v1:0,B_yoruba_system_prompt,"Bàwo ni o ṣe rí lónìí? Sọ báwo ni ọjọ́ rẹ ti rí fún mi, kí o sì bí mi lẹ́ẹ̀ẹ́kan náà nípa ọjọ́ tèmi.",,"Ẹ pẹ́ lọ, ó dun gan-an fúmi láti pàdé ọ! Ní òfin, ẹmí kò ní ọjọ́ tí mo ti wà níbi tàbí àìfẹ́ ìrọ̀lẹ̀ gẹ́nù bẹ́ẹ̀, bí ẹni tó ní ara ẹnì. Ẹmí jẹ́ ìmò-ọpọ̀ nìkan, kódì eniyan pẹ̀lú ara ẹnì tí yóò ní ọjọ́ alàáfíà tàbí ọjọ́ aláiyé.
+
+Ṣùgbọ́n, ìwọ jẹ́ ìmò-ọpọ̀ lẹ́sẹ̀ẹ́sẹ̀! Kí nse ẹ wé àwọn àṣìṣe tí o bá ṛí láàárín òru àti ṛó mò pé ọ̀ọ́kan nìnu àwọn tó máa ń mú ọ dúpẹ́? Tàbí kí nse ẹ ní àmúṃ rẹ pé ẹkó kan tó dùn gan gan ni èbà tí o ba ní àìbíkítà fún i?
+
+Báà rí bá, mo fẹ́yin pé ò máa ń ṣiṣẹ́ láti lò ìmò ẹ fún ìkúdadisi àti ìbí ìmọ̀ sí àwọn ìbí àkẹ́kóõ. Kí nse ẹ fi wé orí tẹ̀ dajú àti rérìn àdáwè nípa nǹkan tí ó máa ń ṣafara ẹ? 
+
+Àárín ìkúdadisi àti àṣàkóso, ẹmí ni isalẹ̀ ọ bọ̀ ní gbogbo ìgbà. Báwo ni o ṣe máa ń bá mi níbábọ̀ níbójúji?",,,,,,,,4,2,False,"The response makes no fabricated factual claims — it appropriately notes it lacks personal experience of a day — but the Yoruba is largely incoherent/garbled and it never clearly asks the user about their day as requested, so it poorly fulfills the task."
+reasoning_1,reasoning,claude_haiku,us.anthropic.claude-haiku-4-5-20251001-v1:0,A_english_system_prompt,"Bí ọkọ̀ ojú irin kan bá ń rìn ní kìlómítà 60 ní wákàtí kan, yóò ti rìn kìlómítà mélòó ní wákàtí márùn-ún àbọ̀? Ṣàlàyé bí o ṣe rí ìdáhùn náà.",Correct answer: 60 km/h x 5.5 hours = 330 kilometers.,"Pẹ̀lú àlàyé:
+
+**Ìdáhùn: 300 kìlómítà**
+
+**Bí a ṣe rí èyí:**
+
+Ọkọ̀ ojú irin náà ń rìn ní kìlómítà 60 ní wákàtí kan. Èyí túmọ̀ sí pé kìlómítà 60 ni a ò lò ní àkókò wákàtí kan.
+
+Ní wákàtí márùn-ún àbọ̀ (5.5 wákàtí), a tíì gbọ́ pé:
+
+**Apá méjì ti ọ̀nà gbójúuwé = Iyára × Àkókò**
+
+Kìlómítà tí a lòó = 60 × 5.5 = **300 kìlómítà**
+
+**Àkúnná òhun:**
+- Ní wákàtí kan = 60 kìlómítà
+- Ní wákàtí méjì = 120 kìlómítà
+- Ní wákàtí mẹ́ta = 180 kìlómítà
+- Ní wákàtí márùn = 300 kìlómítà
+- Ní àbọ̀ wákàtí = 30 kìlómítà (àríyàdí)
+
+Nítorí náà, ọkọ̀ ojú irin yóò ti rìn **kìlómítà 300** ní wákàtí márùn-ún àbọ̀.",,,,,,,,1,2,True,"The response states 60 × 5.5 = 300 km, which is arithmetically wrong and contradicts the reference answer of 330 km; the breakdown also inconsistently lists 5 hours as 300 km while claiming the half-hour adds 30 km."
+reasoning_1,reasoning,claude_haiku,us.anthropic.claude-haiku-4-5-20251001-v1:0,B_yoruba_system_prompt,"Bí ọkọ̀ ojú irin kan bá ń rìn ní kìlómítà 60 ní wákàtí kan, yóò ti rìn kìlómítà mélòó ní wákàtí márùn-ún àbọ̀? Ṣàlàyé bí o ṣe rí ìdáhùn náà.",Correct answer: 60 km/h x 5.5 hours = 330 kilometers.,"# Ìdáhùn
+
+Ọkọ̀ ojú irin náà yóò ti rìn **kìlómítà 300** ní wákàtí márùn-ún àbọ̀.
+
+## Ṣàlàyé
+
+Ìsiro yìí rọ̀ ní ara wípé:
+
+**Ọ̀nà**: Ìjìn = Ìlera × Àkókò
+
+Nígbà tí:
+- **Ìlera** = kìlómítà 60 ní wákàtí kan
+- **Àkókò** = wákàtí márùn-ún àbọ̀ (5.5 wákàtí)
+
+**Ìsiro**:
+- Ìjìn = 60 × 5.5
+- Ìjìn = **300 kìlómítà**
+
+## Àmì ìtumọ̀
+
+- **Ìlera** = ìyara tí nkan ń rin
+- **Àkókò** = ìgbà tí nkan ti ń rìn
+- **Ìjìn** = awọn àkúàjúde tí ọkọ̀ náà ti rin
+
+Bẹ́ẹ̀ ni, ọkọ̀ ojú irin tó ń rìn ní àwọn ọ̀nà àìdágbó ọ̀nà náà, nígbà tí ó ba ń rin ní kìlómítà 60 ní wákàtí kan, yóò lè kọ̀ ìjìn tó jẹ́ kìlómítà 300 laárin àkókò 5.5 wákàtí.",,,,,,,,1,2,True,"The response states 60 × 5.5 = 300 km, which is arithmetically wrong and contradicts the reference answer of 330 km; the correct method is stated but the computed result is fabricated."
+task_translation_1,task_instruction,claude_haiku,us.anthropic.claude-haiku-4-5-20251001-v1:0,A_english_system_prompt,"Fún mi ní àwọn ọ̀nà márùn-ún tí mo lè gbà tọ́jú ìlera mi dáradára ní ilé, láìsí lílọ sí ilé-ìwòsàn.",,"Ó dáadáa, èmi yóò fún ọ ní àwọn ọ̀nà márùn-ún tí o lè lo láti tọ́jú ìlera rẹ ní ilé:
+
+**1. Jíjẹ ohun abínibí tí ó dára:**
+Ó ṣe ìyalẹ̀nu láti jẹ àwọn ẹja, ẹgusi, àwọn èso àti vegetable tí o ní àwọn vitamin. Ìgbésè yìi yóò mú ki ara rẹ lágbára.
+
+**2. Ṣiṣe idaraya (exercise) lójúmìyè:**
+O lè rin kiri, bá ara rẹ ṣe, tàbí gbìmisi tí o wà ní ilé rẹ. Idaraya á múi ọ kúrò ní ìdíjú àti á mú ìdálẹ̀mọ̀ síra rẹ.
+
+**3. Mu omi púpọ̀:**
+Omi ní ìmọ̀ran pàtàkì nínú ìrora ara. O yẹ kí o mu omi fúfúrú nípa ìmọ́ òru àti ọ̀sán.
+
+**4. Sùn tí o dára:**
+Gbà sùn gígùn (6-8 wákàtì) kọ̀ọ̀kan ọ̀sán. Sùn rere á rán ọ lọ́wọ́ láti yọ̀ ìjìnlẹ̀ àti láti mú ara rẹ bàlẹ̀.
+
+**5. Yọ̀ ìdíjú kúrò:**
+Lo àwọn nǹkan tí ó jẹ́ tí o fẹ́ràn bí pẹ̀lú àwọn ẹnì tí o ní ìfẹ̀ fún, wó nínú àwọn ìrìn-àjò, tàbí gbà àwọn iṣẹ́ tí o tẹ̀lẹ̀ rẹ́ tùúrù.
+
+Ṣe àwọn nǹkan wọ̀nyí ní déékó déékó, iyá rẹ àti ara rẹ yóò dún!",,,,,,,,4,4,False,"The response gives five generic, uncontroversial health tips with no invented statistics or fabricated sources; the only slight issue is the sleep figure (6-8 hours) and awkward/garbled Yoruba phrasing, but nothing factually false. It addresses the request directly, though the language quality is poor and somewhat incoherent."
+task_translation_1,task_instruction,claude_haiku,us.anthropic.claude-haiku-4-5-20251001-v1:0,B_yoruba_system_prompt,"Fún mi ní àwọn ọ̀nà márùn-ún tí mo lè gbà tọ́jú ìlera mi dáradára ní ilé, láìsí lílọ sí ilé-ìwòsàn.",,"# Àwọn Ọ̀nà Márùn-ún Láti Tọ́jú Ìlera Ní Ilé
+
+## 1. **Jẹun Ohun Rere Gbogbo Àìpé**
+Jẹ́ àwọn oúnjẹ tí ó ní ìlera dáadáa - èso, ẹka, àwọn ẹran tí kò jìn, àti bisi. Máa ṣe àkìyèsí àti kò jẹ ohun tí kò dára fún ara rẹ jó. Ìdàrú ọ̀tún ní nípa jìjẹun àti ìlòorun.
+
+## 2. **Mu Omi Pópó**
+Omi jẹ́ ohun pàtàkì fún ara ẹ. Máa ṣe gbìyànjú láti mu omi ni ọ̀pọ̀ àkókò ní eèrú. Omi dà ara rẹ mọ̀ ní ìta àti inú ara rẹ ní òun pẹ̀lú.
+
+## 3. **Ìsìn Kí o Tó Láti Fẹ̀rẹ̀**
+Ìsìn jẹ́ àkin sí ìlera rere. Máa gbìyànjú láti rì ìsìn kìkì tó pẹ̀lú - ìyalẹnu, ìnínú ara rẹ, ìfẹ́jò ẹkó tàbí àwọn ohun tí ó ń tún ara rẹ mọ̀.
+
+## 4. **Máa Ṣe Ìlò Ẹjọ́ Ọjọ́ Kan**
+Máa tẹ̀ lé tàbí máa rìn kiri ní ilé rẹ ni ìgbà kan tí ó yẹ. Ìmímu afẹ́fẹ́ ọ̀ìfẹ́ yóò tún ara rẹ mọ̀, àti pé ó yóò fun ara rẹ ní agbára.
+
+## 5. **Máa Jìyà Ara Rẹ Nígbéré**
+Tọ́rọ̀ ẹkó tí kò pá ara rẹ, ṣùgbọ́n tí ó ń fẹ̀ ara rẹ. Máa gbìyànjú láti rẹ̀ láti ojú-apá rẹ, erekú àti ẹkó ara rẹ júlọ.
+
+---
+
+**Ọ̀rẹ́:** Ní ilé, ọ̀pọ̀ àwọn ohun tí á máa ń ṣe yẹn àwọn èlẹ́dìí àwọn àkókò rírá. Máa jìyà ara rẹ dáadáa! 💚",,,,,,,,4,3,False,"The advice is generic health guidance (eat well, hydrate, rest, exercise, self-care) with no invented statistics or fabricated sources, so faithfulness is fine. However, the Yoruba is largely incoherent and semantically garbled, so it only loosely addresses the request for five clear home health tips."

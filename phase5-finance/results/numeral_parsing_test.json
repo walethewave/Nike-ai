@@ -1,0 +1,157 @@
+[
+  {
+    "word": "mẹ́ta",
+    "category": "unit",
+    "sentence": "Mo ná náírà mẹ́ta lórí oúnjẹ",
+    "expected": 3,
+    "got": 3,
+    "correct": true,
+    "raw_intent": "add_expense",
+    "error": null,
+    "elapsed_sec": 3.19
+  },
+  {
+    "word": "mẹ́wàá",
+    "category": "unit",
+    "sentence": "Mo ná náírà mẹ́wàá lórí oúnjẹ",
+    "expected": 10,
+    "got": 10000,
+    "correct": false,
+    "raw_intent": "add_expense",
+    "error": null,
+    "elapsed_sec": 1.32
+  },
+  {
+    "word": "ogún",
+    "category": "regular ten (2x10)",
+    "sentence": "Mo ná náírà ogún lórí oúnjẹ",
+    "expected": 20,
+    "got": 20,
+    "correct": true,
+    "raw_intent": "add_expense",
+    "error": null,
+    "elapsed_sec": 1.7
+  },
+  {
+    "word": "ọgbọ̀n",
+    "category": "regular ten (3x10)",
+    "sentence": "Mo ná náírà ọgbọ̀n lórí oúnjẹ",
+    "expected": 30,
+    "got": 900,
+    "correct": false,
+    "raw_intent": "add_expense",
+    "error": null,
+    "elapsed_sec": 1.85
+  },
+  {
+    "word": "ogójì",
+    "category": "regular ten (4x10)",
+    "sentence": "Mo ná náírà ogójì lórí oúnjẹ",
+    "expected": 40,
+    "got": 20,
+    "correct": false,
+    "raw_intent": "add_expense",
+    "error": null,
+    "elapsed_sec": 1.66
+  },
+  {
+    "word": "àádọ́ta",
+    "category": "irregular subtractive ten (60-10)",
+    "sentence": "Mo ná náírà àádọ́ta lórí oúnjẹ",
+    "expected": 50,
+    "got": 500,
+    "correct": false,
+    "raw_intent": "add_expense",
+    "error": null,
+    "elapsed_sec": 1.1
+  },
+  {
+    "word": "ọgọ́ta",
+    "category": "regular ten (3x20)",
+    "sentence": "Mo ná náírà ọgọ́ta lórí oúnjẹ",
+    "expected": 60,
+    "got": 20,
+    "correct": false,
+    "raw_intent": "add_expense",
+    "error": null,
+    "elapsed_sec": 1.52
+  },
+  {
+    "word": "àádọ́rin",
+    "category": "irregular subtractive ten (80-10)",
+    "sentence": "Mo ná náírà àádọ́rin lórí oúnjẹ",
+    "expected": 70,
+    "got": 4000,
+    "correct": false,
+    "raw_intent": "add_expense",
+    "error": null,
+    "elapsed_sec": 1.29
+  },
+  {
+    "word": "ọgọ́rùn-ún",
+    "category": "hundred",
+    "sentence": "Mo ná náírà ọgọ́rùn-ún lórí oúnjẹ",
+    "expected": 100,
+    "got": 200,
+    "correct": false,
+    "raw_intent": "add_expense",
+    "error": null,
+    "elapsed_sec": 1.39
+  },
+  {
+    "word": "igba",
+    "category": "irregular hundred (not 'ọgọ́rùn méjì')",
+    "sentence": "Mo ná náírà igba lórí oúnjẹ",
+    "expected": 200,
+    "got": 1000,
+    "correct": false,
+    "raw_intent": "add_expense",
+    "error": null,
+    "elapsed_sec": 1.34
+  },
+  {
+    "word": "ẹgbẹ̀rún kan",
+    "category": "thousand (1x)",
+    "sentence": "Mo ná náírà ẹgbẹ̀rún kan lórí oúnjẹ",
+    "expected": 1000,
+    "got": 1000,
+    "correct": true,
+    "raw_intent": "add_expense",
+    "error": null,
+    "elapsed_sec": 1.37
+  },
+  {
+    "word": "ẹgbẹ̀rún méjì",
+    "category": "thousand (2x)",
+    "sentence": "Mo ná náírà ẹgbẹ̀rún méjì lórí oúnjẹ",
+    "expected": 2000,
+    "got": 2000,
+    "correct": true,
+    "raw_intent": "add_expense",
+    "error": null,
+    "elapsed_sec": 1.53
+  },
+  {
+    "word": "ẹgbẹ̀rún márùn-ún",
+    "category": "thousand (5x)",
+    "sentence": "Mo ná náírà ẹgbẹ̀rún márùn-ún lórí oúnjẹ",
+    "expected": 5000,
+    "got": 5000,
+    "correct": true,
+    "raw_intent": "add_expense",
+    "error": null,
+    "elapsed_sec": 2.02
+  },
+  {
+    "word": "ẹgbẹ̀rún mẹ́wàá",
+    "category": "thousand x ten — the original failing case",
+    "sentence": "Mo ná náírà ẹgbẹ̀rún mẹ́wàá lórí oúnjẹ",
+    "expected": 10000,
+    "got": 2000,
+    "correct": false,
+    "raw_intent": "add_expense",
+    "error": null,
+    "elapsed_sec": 2.17,
+    "note": "Retried after a 429 rate-limit on the first attempt. Got 2000 this time (still wrong; expected 10000). A separate earlier call today (different sentence template, live_intent_test.py) got 20000 for the same phrase. Three calls, three different wrong answers -> the model is not consistently wrong in one direction, it appears to not reliably parse this compound numeral at all."
+  }
+]

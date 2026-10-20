@@ -1,0 +1,41 @@
+{
+  "backend": "whisper/steja/whisper-small-yoruba",
+  "lang": "yor_Latn",
+  "n_utterances": 50,
+  "scores": {
+    "tone_sensitive": {
+      "mode": "tone_sensitive",
+      "wer": 0.5915,
+      "cer": 0.2302,
+      "n": 50
+    },
+    "tone_agnostic": {
+      "mode": "tone_agnostic",
+      "wer": 0.4605,
+      "cer": 0.1511,
+      "n": 50
+    }
+  },
+  "sample_predictions": [
+    {
+      "reference": "dr.lee náà fi ẹ̀dùn ọkàn hàn lórí ìrìyìn pé àwọn ọmọ tó wà ní ilẹ̀ turkey ti kó kòkòrò ah5n1 èyí tó jẹ́ ààrùn kòkòrò avian influenza láláì se àìsàn",
+      "hypothesis": "ọ̀tọ́ lí náà fi ẹ̀dànka àǹlórí ìrìnyìn pé àwọn mọ́ tó wà ní ilẹ̀ tọ́kì ti kò kòkòrò ah5n1 èyí tó jẹ́ àrùn kòkòrò àbí àǹflúnsà láláìsẹ̀ àìsàn"
+    },
+    {
+      "reference": "fred ń sáré ní máìlì 105 ní wákàtí 165km/h ó sì ń lọ sí apá àríwá ìwọ̀ oòrùn",
+      "hypothesis": "fred ń sáré ní máìlì 105 ní wákàtí 165km/h ó sì ń lọ sí apá àríwá ìwọ̀ oòrùn"
+    },
+    {
+      "reference": "ọ̀pọ̀ àwọn ọnà onígi tó wà ní australia kò se é dá padà. ó dára kí àwọn tó sẹ̀ ń bẹ̀rẹ má jù ú sínú afẹ́fẹ́.̀",
+      "hypothesis": "ọ̀pọ̀ àwọn ọnà onígi tó wà ní australia kò se é dá padà. ó dára kí àwọn tó sẹ̀ ń bẹ̀rẹ má jù ú sínú afẹ́fẹ́.̀"
+    },
+    {
+      "reference": "a ní ìrírí àkókò gẹ́gẹ́ bí ìṣẹ̀lẹ̀ tó ń ṣẹ̀ lẹ́sẹsẹ láti ọjọ́ iwájú wá sí àkókò yìí lọ sẹ́yìn",
+      "hypothesis": "a ní ìrírí àkókò gẹ́gẹ́ bí ìṣẹ̀lẹ̀ tó ń ṣẹ̀ lẹ́sẹsẹ láti ọjọ́ iwájú wá sí àkókò yìí lọ sẹ́yìn"
+    },
+    {
+      "reference": "amo ọ̀rọ yí i ni rọgbọ lati ṣe ó ma gbà ọdún púpọ̀ kató rí àpere kíkò riakto ajokanpọ̀",
+      "hypothesis": "amọ̀ ọ̀rọ̀ yí ni rọgbọ̀ lásìsé ó ma gba ọdún púpọ̀ kátò rí àpẹrẹ kíkore-átò àjò kọpọ̀"
+    }
+  ]
+}

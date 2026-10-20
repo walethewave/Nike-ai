@@ -1,0 +1,83 @@
+{
+  "base_model": "steja/whisper-small-yoruba",
+  "n_train": 150,
+  "n_eval": 30,
+  "max_steps": 60,
+  "train_sec": 838.1,
+  "device": "mps",
+  "zero_shot_baseline": {
+    "tone_sensitive": {
+      "mode": "tone_sensitive",
+      "wer": 0.7168,
+      "cer": 0.3064,
+      "n": 30
+    },
+    "tone_agnostic": {
+      "mode": "tone_agnostic",
+      "wer": 0.5752,
+      "cer": 0.2134,
+      "n": 30
+    },
+    "label": "zero_shot_baseline",
+    "sample_predictions": [
+      {
+        "reference": "Bí o bá fẹ́ kọ́ nípa jíju boomerang tó padà sí ọ lọ́wọ́, se àrídájú pé o n.",
+        "hypothesis": "bí o bá fẹ́ kọ́ nípa jíju boomerang tó padà sí ọ lọ́wọ́ se àrídájú pé o n"
+      },
+      {
+        "reference": "Súùtù jẹ́ aṣọ okoòwò àwọn alájọse sì ma ń fi orúkọ ìdílé tàbí àpèlé iṣẹ́ perawọn.",
+        "hypothesis": "súutú jẹ́ aṣọkò oò àwọn alájọ se sí ma n fi orúkọ ìdílé tàbí àpelé iṣẹ́ pèràwọn"
+      },
+      {
+        "reference": "Gbogbo iwole okuta na, ti won pe ni “Awon Omo Iya Obirin Meje”, fe to mita 100 si 250 (ese 328 to 820).",
+        "hypothesis": "ogbo ìwọ́lè okuta náà ti wọ́n pe ìní àwọn ọmọ iyà òbè rín méjì fẹ́tòmítà ọ̀gọ́rùn sí igba lẹ́ni ààdọ́ta ẹsẹ̀ 3d20-8"
+      },
+      {
+        "reference": "Jámánì jẹ ọ̀tá gbogbo ní àsìkò ogun àgbáyé kejì, èyí tó yọrísí ìfọwọ́sowọ́pọ̀ láàrin ilẹ̀ USSR àti USA. Pẹ̀lú òpin sí ogun náà, ifigagbaga ètò, ìlànà àti àṣà ló mú àwọn orílẹ̀-èdè náà túká .",
+        "hypothesis": "jámìí ní jẹ́ ọ̀tà abògò ní àsìkò ogun àgbáyíkìjẹ́ èyí tó yọrí sí ìfọ̀sọ ọ̀pọ̀ láàrin ilẹ̀ ussr àti ussr pẹ̀lú òpin sí oguná ìfígàgbága ìdò ìlànà àti àṣàlómú àwọn rí d"
+      },
+      {
+        "reference": "A ní ìrírí àkókò gẹ́gẹ́ bí ìṣẹ̀lẹ̀ tó ń ṣẹ̀ lẹ́sẹsẹ láti ọjọ́ iwájú wá sí àkókò yìí lọ sẹ́yìn.",
+        "hypothesis": "a ní ìrírí àkókò gẹ́gẹ́ bí ìṣẹ̀lẹ̀ tó ń ṣẹ̀ lẹ́sẹsẹ láti ọjọ́ iwájú wá sí àkókò yìí lọ sẹ́yìn"
+      }
+    ]
+  },
+  "finetuned": {
+    "tone_sensitive": {
+      "mode": "tone_sensitive",
+      "wer": 0.7504,
+      "cer": 0.3618,
+      "n": 30
+    },
+    "tone_agnostic": {
+      "mode": "tone_agnostic",
+      "wer": 0.6248,
+      "cer": 0.2717,
+      "n": 30
+    },
+    "label": "finetuned",
+    "sample_predictions": [
+      {
+        "reference": "Bí o bá fẹ́ kọ́ nípa jíju boomerang tó padà sí ọ lọ́wọ́, se àrídájú pé o n.",
+        "hypothesis": "bí o bá fẹ́ kọ́ nípa jíju boomerang tó padà sí ọ lọ́wọ́ se àrídájú pé o n."
+      },
+      {
+        "reference": "Súùtù jẹ́ aṣọ okoòwò àwọn alájọse sì ma ń fi orúkọ ìdílé tàbí àpèlé iṣẹ́ perawọn.",
+        "hypothesis": "ṣùùtù jẹ́ aṣọ kọ̀ owo àwọn alájọ̀ se sí ma n fi orùkọ̀ ìdile tàbí àpèlé iṣẹ̀ péra wọn."
+      },
+      {
+        "reference": "Gbogbo iwole okuta na, ti won pe ni “Awon Omo Iya Obirin Meje”, fe to mita 100 si 250 (ese 328 to 820).",
+        "hypothesis": "Ogbo iwoli okuta naa ti won pe nii awon omo iya oberin meje fẹ́to omita ọgọ́run si igba le ni adọta ẹsẹ3.28."
+      },
+      {
+        "reference": "Jámánì jẹ ọ̀tá gbogbo ní àsìkò ogun àgbáyé kejì, èyí tó yọrísí ìfọwọ́sowọ́pọ̀ láàrin ilẹ̀ USSR àti USA. Pẹ̀lú òpin sí ogun náà, ifigagbaga ètò, ìlànà àti àṣà ló mú àwọn orílẹ̀-èdè náà túká .",
+        "hypothesis": "jámi ní jẹ́ ọ̀ta àbògò ní aṣìkò ogún agbáí kèjẹ̀ èyí ìtó yọrí sí ìfọ́sọọpọ̀ lárin ilẹ̀ ussr àti u.s.ì pẹ̀lú òpin sí ogúnà́ i figagbága ìtó́ ilànà àti àṣà lú mún àwọńrìndì náà"
+      },
+      {
+        "reference": "A ní ìrírí àkókò gẹ́gẹ́ bí ìṣẹ̀lẹ̀ tó ń ṣẹ̀ lẹ́sẹsẹ láti ọjọ́ iwájú wá sí àkókò yìí lọ sẹ́yìn.",
+        "hypothesis": "àní ìrírí àkókò gẹ́gẹ́ bí ìṣẹ̀lẹ̀ tó ń ṣẹ̀ lẹ̀sẹ̀sẹ̀ láti ọjọ́ iwájú wà sí àkókò yìí lọ sẹ́yìn."
+      }
+    ]
+  },
+  "wer_delta_tone_agnostic": 0.0496
+}

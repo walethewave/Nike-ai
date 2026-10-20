@@ -1,0 +1,26 @@
+{
+  "text": "Mo na naira ẹgbẹrun mẹwa lori ounje loni",
+  "n": 5,
+  "tts": {
+    "identical": false,
+    "n_distinct": 5,
+    "hashes": [
+      "d92d68de708d2301",
+      "df98da627e0ae115",
+      "f2ac7716317c097d",
+      "c1f67a2c3833b312",
+      "040f0d08a381947f"
+    ]
+  },
+  "asr": {
+    "identical": true,
+    "n_distinct": 1,
+    "transcripts": [
+      "mọ̀nà náà ẹgbẹ̀mẹ́ alórí ń jẹ́lò ní",
+      "mọ̀nà náà ẹgbẹ̀mẹ́ alórí ń jẹ́lò ní",
+      "mọ̀nà náà ẹgbẹ̀mẹ́ alórí ń jẹ́lò ní",
+      "mọ̀nà náà ẹgbẹ̀mẹ́ alórí ń jẹ́lò ní",
+      "mọ̀nà náà ẹgbẹ̀mẹ́ alórí ń jẹ́lò ní"
+    ]
+  }
+}

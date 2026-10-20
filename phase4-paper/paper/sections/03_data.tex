@@ -1,0 +1,29 @@
+% Fill in from phase1-data/DATA_CARD.md once finalized — don't duplicate
+% by hand, literally pull the numbers from there so the two documents can't
+% drift out of sync.
+
+We construct our training and evaluation corpus from [SOURCES — see
+\texttt{phase1-data/DATA\_CARD.md}], totaling [N] hours across [N] speakers.
+We hold out a speaker-disjoint test set of [N] utterances ([N] speakers)
+for all evaluation reported in \S\ref{sec:results}; no test-set speaker
+appears in any training split.
+
+\paragraph{Licensing.} [State the Phase 1 licensing decision here —
+research-only vs. permissive-only vs. both-variants track. This directly
+determines what can be claimed about downstream deployability in
+\S\ref{sec:ethics}.]
+
+\paragraph{Domain.} [State whether the corpus is predominantly read speech,
+scripted, or spontaneous — and whether this matches or mismatches the
+conversational domain the system is evaluated on in \S\ref{sec:experiments}.
+A train/eval domain mismatch is a real limitation, state it here plainly if
+true rather than only in \S\ref{sec:limitations}.]
+
+\paragraph{Pipeline validation data.} Independent of the training/eval
+corpus above, we additionally used \citet{shunyalabs-yoruba} (3{,}548
+utterances, unstated license) exclusively for end-to-end pipeline
+smoke-testing during development --- confirming that ASR, dialogue, and TTS
+components function correctly together before running the licensed
+evaluation reported in \S\ref{sec:results}. We do not include this data in
+any reported training or evaluation numbers, given its unclear licensing
+status.

@@ -1,0 +1,88 @@
+[
+  {
+    "label": "add_expense",
+    "input_text": "Mo ná ẹgbẹ̀rún méjì fún oúnjẹ lánàá",
+    "expect_intent": "add_expense",
+    "parsed": {
+      "intent": "add_expense",
+      "amount": 2000,
+      "category": "food",
+      "description": "oúnjẹ lánàá",
+      "reply_yoruba": null
+    },
+    "error": null,
+    "elapsed_sec": 2.26,
+    "balance_after_write": -2000.0
+  },
+  {
+    "label": "add_income",
+    "input_text": "Mo gba ẹgbẹ̀rún mẹ́wàá gẹ́gẹ́ bí owó oṣù",
+    "expect_intent": "add_income",
+    "parsed": {
+      "intent": "add_income",
+      "amount": 20000,
+      "category": "salary",
+      "description": "owó oṣù",
+      "reply_yoruba": null
+    },
+    "error": null,
+    "elapsed_sec": 1.45,
+    "balance_after_write": 18000.0
+  },
+  {
+    "label": "get_balance",
+    "input_text": "Èló ni mo ní lọ́wọ́ mi nísisìyí?",
+    "expect_intent": "get_balance",
+    "parsed": {
+      "intent": "get_balance",
+      "amount": null,
+      "category": null,
+      "description": null,
+      "reply_yoruba": null
+    },
+    "error": null,
+    "elapsed_sec": 1.27
+  },
+  {
+    "label": "get_summary",
+    "input_text": "Ṣe àkótán ìnáwó mi fún mi",
+    "expect_intent": "get_summary",
+    "parsed": {
+      "intent": "get_balance",
+      "amount": null,
+      "category": null,
+      "description": null,
+      "reply_yoruba": null
+    },
+    "error": null,
+    "elapsed_sec": 1.27
+  },
+  {
+    "label": "unclear_offtopic",
+    "input_text": "Ǹjẹ́ o mọ ibi tí mo fi bàtà mi sí?",
+    "expect_intent": "unclear",
+    "parsed": {
+      "intent": "unclear",
+      "amount": null,
+      "category": null,
+      "description": null,
+      "reply_yoruba": "Jọ̀wọ́, kìí ṣe ohun oníìmọ̀ fún mi. Ṣé o fẹ́ kọ̀ owe tàbí béèrè nípá iye owó e?"
+    },
+    "error": null,
+    "elapsed_sec": 2.25
+  },
+  {
+    "label": "add_expense_no_amount",
+    "input_text": "Mo ná owó lórí ọkọ̀ irin-àjò",
+    "expect_intent": "add_expense",
+    "parsed": {
+      "intent": "add_expense",
+      "amount": null,
+      "category": "transport",
+      "description": "ọkọ̀ irin-àjò",
+      "reply_yoruba": null
+    },
+    "error": null,
+    "elapsed_sec": 1.44
+  }
+]

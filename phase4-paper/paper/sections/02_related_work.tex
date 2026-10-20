@@ -1,0 +1,42 @@
+\paragraph{Yor\`ub\'a ASR.} \citet{ncair-yoruba-asr} released a Whisper-small
+fine-tune for Yor\`ub\'a (NCAIR1/Yoruba-ASR), developed by Awarri
+Technologies with Nigeria's Federal Ministry of Communications, Innovation
+and Digital Economy. \citet{owe-voice} evaluate monolingual and
+multilingual ASR systems on a Yor\`ub\'a proverb speech dataset, finding
+that current systems fail to capture cultural/idiomatic nuance.
+\citet{tone-yoruba-asr} systematically study the effect of tone marking on
+Yor\`ub\'a ASR evaluation, motivating our tone-sensitive/tone-agnostic
+scoring split (\S\ref{sec:experiments}). \citet{voices-unheard-yoruba} study
+NLP resource gaps across Yor\`ub\'a regional dialects. \citet{african-asr-survey}
+provide a systematic review of ASR for African low-resource languages more
+broadly, which we build on for related-work framing.
+
+\paragraph{Multilingual and low-resource ASR foundation models.} Meta's
+Massive Multilingual Speech (MMS) project \citep{mms} extended wav2vec~2.0
+with per-language adapters across 1,000+ languages. More recently,
+Omnilingual ASR \citep{omnilingual2025} extends coverage to 1,600+ languages
+(5,400+ via zero-shot in-context learning) with an Apache~2.0 license,
+built in part with Mozilla Common Voice, African Next Voices, and Lanfrica.
+To our knowledge, no prior work benchmarks Omnilingual ASR specifically on
+Yor\`ub\'a against the existing Yor\`ub\'a-specific baselines above.
+
+\paragraph{Yor\`ub\'a speech data.} \citet{naijavoices} release the
+NaijaVoices dataset, $\sim$1,800 hours of speech across Igbo, Hausa, and
+Yor\`ub\'a from 5,000+ speakers (CC~BY-NC-SA~4.0). \citet{iroyinspeech}
+release \`Ir\`oy\`inSpeech, a $\sim$48-hour Yor\`ub\'a speech corpus spanning
+news and creative-writing domains. We use [DATASETS — fill in from Phase 1]
+for training and evaluation.
+
+\paragraph{Text-to-speech for Nigerian languages.} YarnGPT2
+\citep{yarngpt2} is an open TTS model supporting Yor\`ub\'a, Igbo, Hausa,
+and Nigerian-accented English via pure language modeling (no external
+phonetic adapters), which we use for the speech-output stage of our
+pipeline (\S\ref{sec:methodology}).
+
+\paragraph{Positioning.} Prior work evaluates Yor\`ub\'a ASR
+(\citealp{ncair-yoruba-asr,owe-voice,tone-yoruba-asr}) and Yor\`ub\'a/Nigerian
+TTS (\citealp{yarngpt2}) as independent components. We are, to our
+knowledge, the first to evaluate a full speech-in, speech-out conversational
+system with multi-turn dialogue state for Yor\`ub\'a, and the first to
+benchmark Omnilingual ASR against existing Yor\`ub\'a baselines under
+tone-aware scoring.

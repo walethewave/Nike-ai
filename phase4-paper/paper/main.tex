@@ -1,0 +1,70 @@
+% ============================================================
+% PLACEHOLDER CLASS FILE — see PLAN.md "LaTeX template" section.
+% This uses plain `article` so section files compile and you can check
+% page count/flow NOW. Before submission, replace this preamble with the
+% real ACL style file (search "acl-style-files" on GitHub for the current
+% year's template) — do not submit with `article`.
+% ============================================================
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage[margin=1in]{geometry}
+
+\title{Towards Conversational Voice AI for Low-Resource Nigerian Languages:\\
+A Pipeline Approach for Yor\`ub\'a}
+\author{
+  % TODO: your name + affiliation
+}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\input{sections/00_abstract}
+\end{abstract}
+
+\section{Introduction}
+\label{sec:introduction}
+\input{sections/01_introduction}
+
+\section{Related Work}
+\label{sec:related}
+\input{sections/02_related_work}
+
+\section{Data}
+\label{sec:data}
+\input{sections/03_data}
+
+\section{Methodology}
+\label{sec:methodology}
+\input{sections/04_methodology}
+
+\section{Experiments}
+\label{sec:experiments}
+\input{sections/05_experiments}
+
+\section{Results}
+\label{sec:results}
+\input{sections/06_results}
+
+\section{Limitations}
+\label{sec:limitations}
+\input{sections/07_limitations}
+
+\section{Ethics and Broader Impact}
+\label{sec:ethics}
+\input{sections/08_ethics}
+
+\section{Conclusion}
+\input{sections/09_conclusion}
+
+\bibliographystyle{acl_natbib}
+\bibliography{references}
+
+\end{document}

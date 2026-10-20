@@ -1,0 +1,42 @@
+{
+  "backend": "whisper/CLEAR-Global/whisper-small-clearglobal-hausa-asr-1.0.0",
+  "lang": "hau_Latn",
+  "n_utterances": 5,
+  "scores": {
+    "tone_sensitive": {
+      "mode": "tone_sensitive",
+      "wer": 0.6512,
+      "cer": 0.3599,
+      "n": 5
+    },
+    "tone_agnostic": {
+      "mode": "tone_agnostic",
+      "wer": 0.6512,
+      "cer": 0.3599,
+      "n": 5
+    }
+  },
+  "sample_predictions": [
+    {
+      "reference": "nasarorin da vautier ta samu marasa alaka da bada umarni ba sun hada da yajin cin abinci a 1973 a kan abin da ya ke ganin dabaibayin siyasa ne",
+      "hypothesis": "nasarorin da motar ta samu nasara alaƙa da bada umarnin masu haɗa da ke yin cin abinci a alif dubu ɗaya da dari tara da saba'in da uku akan wakan abinda ya ke ganin da bai bayin siyasa ne"
+    },
+    {
+      "reference": "duk da cewa keken dokin sun kunshi katako a jere amma su kan ba da dama ga dawakan da ke jan su yin sauri tare da jan manyan kaya fiye da a kan hanyoyi masu gargada na zamanin",
+      "hypothesis": "duk da cewa keken dokin sun kwashe shikata ko a jere amma sun kammala dama ga ɗaukan da ke don su yi sauri tare jim manyan ƙafa fiye da kan hanyoyi masu gargada na zaɓa nan"
+    },
+    {
+      "reference": "callejon del beso alley na kiss. falon baranda biyu da santimita 69 kacal suka rabu gida ne na tsohuwar tatsuniyar soyayya",
+      "hypothesis": "ƙara johndalbe ya so aliyu na ke falon maranda biyu da kantaimita sittin da tara ƙace suka rabu gida ne na tsohuwar tat tatsuniyar soyayyar soyayya"
+    },
+    {
+      "reference": "antarctica ce nahiya mafi sanyi a duniya wadda ta kewaye doron duniya na kudu",
+      "hypothesis": "an taƙa ce na gina mafi sanyi a duniya wanda ta ke kewaye doron duniya da kuɗi"
+    },
+    {
+      "reference": "tokyo za ta kasance gari daya tilo na asiya da ya taba karbar bakuncin wasannin olympics karo biyu bayan da ta dauki nauyin wasannin a shekarar 1964",
+      "hypothesis": "ƙoƙari za ta kasance gari ɗaya kilo na asiya da ya taɓa karɓar baƙon cin wasannin idan ta ɗauki nauyi wasanni a sheƙarar dalibin dari dubu ɗaya da sittin da hudu"
+    }
+  ],
+  "note": "LIVE smoke test against a real downloaded model and real downloaded audio from a dataset with an unstated license -- treat these numbers as a pipeline proof, not a benchmark result to cite."
+}

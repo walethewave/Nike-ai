@@ -1,0 +1,26 @@
+\subsection{ASR Benchmark}
+We evaluate [N] ASR systems (\S\ref{sec:methodology}) on our held-out test
+set (\S\ref{sec:data}). Following \citet{tone-yoruba-asr}'s finding that
+tone marking materially affects reported Yor\`ub\'a ASR quality, we report
+both \emph{tone-sensitive} (Unicode-NFC-normalized, diacritics scored as
+real characters) and \emph{tone-agnostic} (tone marks stripped, underdot
+letters --- \emph{\d{e} \d{o} \d{s}} --- preserved, since these mark distinct
+phonemes rather than tone) WER and CER for every system, computed with the
+same scorer (\texttt{phase2-asr/scripts/normalize.py}) across all systems
+so no comparison is confounded by inconsistent normalization.
+
+\subsection{End-to-End Conversational Evaluation}
+We evaluate the full pipeline with [N] native Yor\`ub\'a speakers across
+[N] test questions/tasks spanning [CATEGORIES — mirror
+\texttt{yoruba-prompt-experiment/config.py}'s task categories if reused].
+For each turn we measure: (1) ASR transcription correctness, (2) whether
+the dialogue response remained in Yor\`ub\'a with no unintended
+code-switching (using the code-switch heuristic from
+\texttt{yoruba-prompt-experiment/metrics.py}), and (3) native-speaker
+ratings of response naturalness and task success on a 1--5 scale.
+
+\subsection{Baselines}
+[If comparing against any other system beyond the ASR-only baselines above
+— e.g.\ a commercial API pipeline — describe it here. If not, state
+explicitly that no prior end-to-end Yor\`ub\'a conversational system exists
+to compare against, which is itself part of the novelty claim.]

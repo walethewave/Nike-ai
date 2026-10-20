@@ -1,0 +1,12 @@
+{
+  "backend": "omnilingual/omniASR_CTC_300M_v2",
+  "lang": "yor_Latn",
+  "n_utterances": 500,
+  "scores": {
+    "tone_sensitive": {"mode": "tone_sensitive", "wer": 0.412, "cer": 0.187, "n": 500},
+    "tone_agnostic": {"mode": "tone_agnostic", "wer": 0.298, "cer": 0.121, "n": 500}
+  },
+  "sample_predictions": [
+    {"reference": "SAMPLE — replace with real Phase 2 output", "hypothesis": "SAMPLE — replace with real Phase 2 output"}
+  ]
+}

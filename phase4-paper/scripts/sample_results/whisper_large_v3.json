@@ -1,0 +1,12 @@
+{
+  "backend": "whisper/large-v3",
+  "lang": "yor_Latn",
+  "n_utterances": 500,
+  "scores": {
+    "tone_sensitive": {"mode": "tone_sensitive", "wer": 0.583, "cer": 0.276, "n": 500},
+    "tone_agnostic": {"mode": "tone_agnostic", "wer": 0.401, "cer": 0.165, "n": 500}
+  },
+  "sample_predictions": [
+    {"reference": "SAMPLE — replace with real Phase 2 output", "hypothesis": "SAMPLE — replace with real Phase 2 output"}
+  ]
+}
